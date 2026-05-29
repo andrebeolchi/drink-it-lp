@@ -557,15 +557,20 @@
         btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
       });
 
+      var validLangs = ['pt', 'en', 'es'];
+      var urlLang = new URLSearchParams(window.location.search).get('lang');
       var savedLang = null;
       try { savedLang = localStorage.getItem('drink-it-lang'); } catch (e) {}
-      if (!savedLang) {
-        var nav = (navigator.language || '').toLowerCase();
-        if (nav.startsWith('en')) savedLang = 'en';
-        else if (nav.startsWith('es')) savedLang = 'es';
-        else savedLang = 'pt';
-      }
-      setLang(savedLang);
+      var finalLang =
+        (validLangs.indexOf(urlLang) !== -1 ? urlLang : null) ||
+        (validLangs.indexOf(savedLang) !== -1 ? savedLang : null) ||
+        (function () {
+          var nav = (navigator.language || '').toLowerCase();
+          if (nav.startsWith('en')) return 'en';
+          if (nav.startsWith('es')) return 'es';
+          return 'pt';
+        })();
+      setLang(finalLang);
     </script>
 
   </body>
