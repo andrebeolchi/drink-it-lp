@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drink It: Cards &amp; Shots</title>
+    <meta name="description" content="Mais de 60 cartas, minijogos e Batata Quente para deixar qualquer festa inesquecível. 100% offline. iOS e Android." />
+    <meta property="og:title" content="Drink It: Cards &amp; Shots" />
+    <meta property="og:description" content="O jogo de cartas que anima qualquer festa. 100% offline. iOS e Android." />
+    <meta property="og:image" content="assets/ptbr/three.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <style>
+      :root {
+        --bg: hsl(224, 20%, 6%);
+        --surface: hsl(224, 18%, 10%);
+        --surface-raised: hsl(224, 16%, 14%);
+        --brand: hsl(262, 80%, 62%);
+        --brand-glow: hsla(262, 80%, 62%, 0.28);
+        --brand-subtle: hsla(262, 80%, 62%, 0.1);
+        --brand-border: hsla(262, 80%, 62%, 0.3);
+        --accent: hsl(38, 92%, 56%);
+        --fg: hsl(220, 14%, 96%);
+        --muted: hsl(220, 10%, 55%);
+        --subtle: hsl(220, 8%, 35%);
+        --border: hsl(224, 14%, 20%);
+        --success: hsl(142, 60%, 45%);
+        --radius: 12px;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      a { color: var(--brand); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+      /* ── NAV ──────────────────────────────────────────────────── */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: hsla(224, 20%, 6%, 0.88);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+
+      .logo-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--brand);
+        box-shadow: 0 0 10px var(--brand-glow);
+        flex-shrink: 0;
+      }
+
+      .logo-name {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--fg);
+        letter-spacing: -0.02em;
+      }
+
+      .lang-switcher {
+        display: flex;
+        gap: 0.25rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.25rem;
+      }
+
+      .lang-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--muted);
+        padding: 0.25rem 0.65rem;
+        border-radius: 5px;
+        letter-spacing: 0.04em;
+        transition: color 0.15s, background 0.15s;
+        font-family: inherit;
+      }
+
+      .lang-btn:hover { color: var(--fg); }
+
+      .lang-btn.active {
+        background: var(--brand);
+        color: #fff;
+      }
+
+      /* ── HERO ─────────────────────────────────────────────────── */
+      .hero {
+        padding: 5rem 0 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -240px;
+        left: 40%;
+        width: 900px;
+        height: 700px;
+        background: radial-gradient(ellipse, hsla(262, 80%, 62%, 0.12) 0%, transparent 65%);
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: var(--brand-subtle);
+        border: 1px solid var(--brand-border);
+        color: var(--brand);
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.02em;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 5vw, 3.6rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+        margin-bottom: 1.25rem;
+        color: var(--fg);
+      }
+
+      .hero h1 em {
+        font-style: normal;
+        color: var(--brand);
+      }
+
+      .hero-desc {
+        font-size: 1.05rem;
+        color: var(--muted);
+        line-height: 1.75;
+        margin-bottom: 2rem;
+        max-width: 460px;
+      }
+
+      .cta-group {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+      }
+
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.8rem 1.4rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.15s, box-shadow 0.15s;
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+      }
+
+      .cta-btn:hover { transform: translateY(-2px); text-decoration: none; }
+
+      .cta-primary {
+        background: var(--brand);
+        color: #fff;
+        box-shadow: 0 4px 20px var(--brand-glow);
+      }
+
+      .cta-primary:hover { box-shadow: 0 8px 32px var(--brand-glow); }
+
+      .cta-secondary {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--fg);
+      }
+
+      .cta-secondary:hover { border-color: var(--subtle); }
+
+      .hero-note {
+        font-size: 0.8rem;
+        color: var(--subtle);
+      }
+
+      .hero-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-img {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        border-radius: 20px;
+        filter: drop-shadow(0 24px 64px hsla(262, 80%, 62%, 0.18));
+      }
+
+      /* ── SECTION HEADER ───────────────────────────────────────── */
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-header p {
+        color: var(--muted);
+        max-width: 480px;
+        margin: 0 auto;
+        font-size: 1rem;
+      }
+
+      /* ── FEATURES ─────────────────────────────────────────────── */
+      .features {
+        padding: 5rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .feature-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        transition: border-color 0.2s, transform 0.2s;
+      }
+
+      .feature-card:hover {
+        border-color: var(--brand-border);
+        transform: translateY(-2px);
+      }
+
+      .feature-icon {
+        font-size: 1.85rem;
+        margin-bottom: 0.85rem;
+        display: block;
+        line-height: 1;
+      }
+
+      .feature-title {
+        font-size: 0.975rem;
+        font-weight: 700;
+        color: var(--fg);
+        margin-bottom: 0.5rem;
+      }
+
+      .feature-desc {
+        font-size: 0.875rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      /* ── SCREENSHOTS ──────────────────────────────────────────── */
+      .screenshots {
+        padding: 5rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .screenshot-track {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        padding: 0.5rem 0 1.5rem;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: var(--border) transparent;
+      }
+
+      .screenshot-track::-webkit-scrollbar { height: 4px; }
+      .screenshot-track::-webkit-scrollbar-track { background: transparent; }
+      .screenshot-track::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+      .screenshot-track img {
+        flex-shrink: 0;
+        height: 560px;
+        width: auto;
+        border-radius: 16px;
+        scroll-snap-align: start;
+        border: 1px solid var(--border);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+        display: block;
+      }
+
+      /* ── HOW TO PLAY ──────────────────────────────────────────── */
+      .how-to-play {
+        padding: 5rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .steps { display: grid; gap: 4rem; }
+
+      .step {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .step:nth-child(even) .step-visual { order: -1; }
+
+      .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: var(--brand);
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 14px var(--brand-glow);
+      }
+
+      .step-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.85rem;
+        line-height: 1.2;
+      }
+
+      .step-desc {
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.75;
+        max-width: 420px;
+      }
+
+      .step-visual {
+        display: flex;
+        justify-content: center;
+      }
+
+      .step-img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+        display: block;
+      }
+
+      /* ── AGE NOTICE ───────────────────────────────────────────── */
+      .age-notice {
+        padding: 4rem 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .age-card {
+        background: var(--surface);
+        border: 1px solid hsla(38, 92%, 56%, 0.25);
+        border-radius: var(--radius);
+        padding: 1.75rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
+      .age-icon {
+        font-size: 2rem;
+        flex-shrink: 0;
+        line-height: 1;
+        margin-top: 0.1rem;
+      }
+
+      .age-card h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--accent);
+      }
+
+      .age-card p {
+        font-size: 0.875rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      /* ── FOOTER ───────────────────────────────────────────────── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 2.5rem 0;
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .footer-sep { color: var(--subtle); }
+
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .footer-links a {
+        color: var(--muted);
+        font-size: 0.85rem;
+        transition: color 0.15s;
+      }
+
+      .footer-links a:hover { color: var(--fg); text-decoration: none; }
+
+      /* ── RESPONSIVE ───────────────────────────────────────────── */
+      @media (max-width: 900px) {
+        .feature-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+
+      @media (max-width: 768px) {
+        .hero { padding: 3.5rem 0 2.5rem; }
+
+        .hero-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        .hero-desc { margin-left: auto; margin-right: auto; }
+        .cta-group { justify-content: center; }
+        .hero-visual { order: -1; }
+        .hero-img { max-width: 300px; }
+
+        .step {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        .step:nth-child(even) .step-visual { order: initial; }
+        .step-desc { margin: 0 auto; }
+        .step-number { margin-left: auto; margin-right: auto; display: flex; }
+
+        .footer-inner { flex-direction: column; align-items: flex-start; }
+      }
+
+      @media (max-width: 520px) {
+        .feature-grid { grid-template-columns: 1fr; }
+        .screenshot-track img { height: 440px; }
+        .age-card { flex-direction: column; gap: 0.75rem; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="#">
+          <span class="logo-dot"></span>
+          <span class="logo-name">Drink It</span>
+        </a>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-content">
+              <div class="hero-badge" data-i18n="heroBadge">Jogo de cartas para adultos · 17+</div>
+              <h1 data-i18n-html="heroTitle">A festa começa com <em>uma carta</em></h1>
+              <p class="hero-desc" data-i18n="heroDesc">
+                Drink It tem mais de 60 cartas, 8 tipos de jogo, Batata Quente com timer de áudio e relatório da partida. Tudo 100% offline.
+              </p>
+              <div class="cta-group">
+                <a class="cta-btn cta-primary" href="#" data-i18n="ctaAppStore">
+                  Baixar no App Store
+                </a>
+                <a class="cta-btn cta-secondary" href="#" data-i18n="ctaPlayStore">
+                  Baixar no Google Play
+                </a>
+              </div>
+              <p class="hero-note" data-i18n="heroNote">Grátis · 17+ · iOS &amp; Android</p>
+            </div>
+            <div class="hero-visual">
+              <img
+                class="hero-img"
+                data-lang-img="three"
+                src="assets/ptbr/three.png"
+                alt="Drink It app screenshots"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="featuresTitle">Por que o Drink It?</h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <span class="feature-icon">🃏</span>
+              <div class="feature-title" data-i18n="feat1Title">+60 cartas únicas</div>
+              <div class="feature-desc" data-i18n="feat1Desc">
+                Ações, minijogos em grupo, duelos, modificadores de regra e muito mais.
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">📵</span>
+              <div class="feature-title" data-i18n="feat2Title">100% offline</div>
+              <div class="feature-desc" data-i18n="feat2Desc">
+                Sem internet, sem conta, sem rastreamento. Tudo na palma da mão.
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">👥</span>
+              <div class="feature-title" data-i18n="feat3Title">Até 10 jogadores</div>
+              <div class="feature-desc" data-i18n="feat3Desc">
+                De 2 a 10 jogadores com avatares e contagem individual de drinks.
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">🎮</span>
+              <div class="feature-title" data-i18n="feat4Title">8 tipos de jogo</div>
+              <div class="feature-desc" data-i18n="feat4Desc">
+                Batata Quente, Eu Nunca, Cachoeira, Duelo, Regras e muito mais.
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">📊</span>
+              <div class="feature-title" data-i18n="feat5Title">Relatório ao final</div>
+              <div class="feature-desc" data-i18n="feat5Desc">
+                Veja o ranking e compartilhe o relatório da festa com seus amigos.
+              </div>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">🌍</span>
+              <div class="feature-title" data-i18n="feat6Title">3 idiomas</div>
+              <div class="feature-desc" data-i18n="feat6Desc">
+                Português, inglês e espanhol. Troque o idioma a qualquer momento.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREENSHOTS -->
+      <section class="screenshots">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="screenshotsTitle">Veja como funciona</h2>
+          </div>
+        </div>
+        <div style="padding: 0 1.5rem;">
+          <div class="screenshot-track" style="max-width: 1100px; margin: 0 auto;">
+            <img data-lang-img="Slice 1" src="assets/ptbr/Slice 1.png" alt="Screenshot 1" />
+            <img data-lang-img="Slice 2" src="assets/ptbr/Slice 2.png" alt="Screenshot 2" />
+            <img data-lang-img="Slice 3" src="assets/ptbr/Slice 3.png" alt="Screenshot 3" />
+            <img data-lang-img="Slice 4" src="assets/ptbr/Slice 4.png" alt="Screenshot 4" />
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW TO PLAY -->
+      <section class="how-to-play">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="howTitle">Como jogar</h2>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-content">
+                <div class="step-number">1</div>
+                <h3 class="step-title" data-i18n="step1Title">Adicione os jogadores</h3>
+                <p class="step-desc" data-i18n="step1Desc">
+                  Coloque os nomes de todos. Cada jogador tem seu avatar e contagem própria de drinks.
+                </p>
+              </div>
+              <div class="step-visual">
+                <img
+                  class="step-img"
+                  data-lang-img="users"
+                  src="assets/ptbr/users.png"
+                  alt="Adicione os jogadores"
+                />
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-content">
+                <div class="step-number">2</div>
+                <h3 class="step-title" data-i18n="step2Title">Compre uma carta</h3>
+                <p class="step-desc" data-i18n="step2Desc">
+                  Deslize para revelar a próxima carta e veja o que o jogo reservou para o grupo.
+                </p>
+              </div>
+              <div class="step-visual">
+                <img
+                  class="step-img"
+                  data-lang-img="home"
+                  src="assets/ptbr/home.png"
+                  alt="Compre uma carta"
+                />
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-content">
+                <div class="step-number">3</div>
+                <h3 class="step-title" data-i18n="step3Title">Siga as regras e divirta-se</h3>
+                <p class="step-desc" data-i18n="step3Desc">
+                  Minijogos, duelos, regras e a temida Batata Quente — e ao final, veja quem mais bebeu.
+                </p>
+              </div>
+              <div class="step-visual">
+                <img
+                  class="step-img"
+                  data-lang-img="share"
+                  src="assets/ptbr/share.png"
+                  alt="Relatório final"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AGE NOTICE -->
+      <section class="age-notice">
+        <div class="container">
+          <div class="age-card">
+            <span class="age-icon">🔞</span>
+            <div>
+              <h3 data-i18n="ageTitle">Conteúdo adulto</h3>
+              <p data-i18n="ageDesc">
+                Drink It é destinado a maiores de 17 anos. O app contém referências ao consumo de álcool e não é direcionado a menores de 13 anos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="logo-dot" style="width:8px;height:8px;"></span>
+            <span>abag.tech</span>
+            <span class="footer-sep">&nbsp;·&nbsp;</span>
+            <span data-i18n="footerRights">Todos os direitos reservados.</span>
+          </div>
+          <div class="footer-links">
+            <a href="privacy-policy.html" data-i18n="footerPrivacy">Política de Privacidade</a>
+            <a href="mailto:tech.abag@gmail.com" data-i18n="footerContact">Contato</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const t = {
+        pt: {
+          pageTitle: 'Drink It: Cards & Shots — O jogo de cartas para festas',
+          heroBadge: 'Jogo de cartas para adultos · 17+',
+          heroTitle: 'A festa começa com <em>uma carta</em>',
+          heroDesc: 'Drink It tem mais de 60 cartas, 8 tipos de jogo, Batata Quente com timer de áudio e relatório da partida. Tudo 100% offline.',
+          ctaAppStore: 'Baixar no App Store',
+          ctaPlayStore: 'Baixar no Google Play',
+          heroNote: 'Grátis · 17+ · iOS & Android',
+          featuresTitle: 'Por que o Drink It?',
+          feat1Title: '+60 cartas únicas',
+          feat1Desc: 'Ações, minijogos em grupo, duelos, modificadores de regra e muito mais.',
+          feat2Title: '100% offline',
+          feat2Desc: 'Sem internet, sem conta, sem rastreamento. Tudo na palma da mão.',
+          feat3Title: 'Até 10 jogadores',
+          feat3Desc: 'De 2 a 10 jogadores com avatares e contagem individual de drinks.',
+          feat4Title: '8 tipos de jogo',
+          feat4Desc: 'Batata Quente, Eu Nunca, Cachoeira, Duelo, Regras e muito mais.',
+          feat5Title: 'Relatório ao final',
+          feat5Desc: 'Veja o ranking e compartilhe o relatório da festa com seus amigos.',
+          feat6Title: '3 idiomas',
+          feat6Desc: 'Português, inglês e espanhol. Troque o idioma a qualquer momento.',
+          screenshotsTitle: 'Veja como funciona',
+          howTitle: 'Como jogar',
+          step1Title: 'Adicione os jogadores',
+          step1Desc: 'Coloque os nomes de todos. Cada jogador tem seu avatar e contagem própria de drinks.',
+          step2Title: 'Compre uma carta',
+          step2Desc: 'Deslize para revelar a próxima carta e veja o que o jogo reservou para o grupo.',
+          step3Title: 'Siga as regras e divirta-se',
+          step3Desc: 'Minijogos, duelos, regras e a temida Batata Quente — e ao final, veja quem mais bebeu.',
+          ageTitle: 'Conteúdo adulto',
+          ageDesc: 'Drink It é destinado a maiores de 17 anos. O app contém referências ao consumo de álcool e não é direcionado a menores de 13 anos.',
+          footerPrivacy: 'Política de Privacidade',
+          footerContact: 'Contato',
+          footerRights: 'Todos os direitos reservados.',
+        },
+        en: {
+          pageTitle: 'Drink It: Cards & Shots — The party card game',
+          heroBadge: 'Adult card game · 17+',
+          heroTitle: 'The party starts with <em>a card</em>',
+          heroDesc: 'Drink It features 60+ cards, 8 game types, Hot Potato with an audio timer, and a shareable end-game report. All 100% offline.',
+          ctaAppStore: 'Download on App Store',
+          ctaPlayStore: 'Get it on Google Play',
+          heroNote: 'Free · 17+ · iOS & Android',
+          featuresTitle: 'Why Drink It?',
+          feat1Title: '60+ unique cards',
+          feat1Desc: 'Actions, group mini-games, showdowns, rule modifiers, and much more.',
+          feat2Title: '100% offline',
+          feat2Desc: 'No internet, no account, no tracking. Everything in the palm of your hand.',
+          feat3Title: 'Up to 10 players',
+          feat3Desc: 'From 2 to 10 players with avatars and individual drink counts.',
+          feat4Title: '8 game modes',
+          feat4Desc: 'Hot Potato, Never Have I Ever, Waterfall, Showdown, Rules, and more.',
+          feat5Title: 'End-game report',
+          feat5Desc: 'See the ranking and share the party report with your friends.',
+          feat6Title: '3 languages',
+          feat6Desc: 'Portuguese, English, and Spanish. Switch languages at any time.',
+          screenshotsTitle: 'See how it works',
+          howTitle: 'How to play',
+          step1Title: 'Add the players',
+          step1Desc: "Enter everyone's names. Each player gets their own avatar and individual drink count.",
+          step2Title: 'Draw a card',
+          step2Desc: 'Swipe to reveal the next card and see what the game has in store for the group.',
+          step3Title: 'Follow the rules and have fun',
+          step3Desc: "Mini-games, showdowns, rule cards, and the dreaded Hot Potato — then see who drank the most.",
+          ageTitle: 'Adult content',
+          ageDesc: 'Drink It is intended for users aged 17 and older. The app contains references to alcohol consumption and is not directed at children under 13.',
+          footerPrivacy: 'Privacy Policy',
+          footerContact: 'Contact',
+          footerRights: 'All rights reserved.',
+        },
+        es: {
+          pageTitle: 'Drink It: Cards & Shots — El juego de cartas para fiestas',
+          heroBadge: 'Juego de cartas para adultos · 17+',
+          heroTitle: 'La fiesta empieza con <em>una carta</em>',
+          heroDesc: 'Drink It tiene más de 60 cartas, 8 tipos de juego, Papa Caliente con temporizador de audio y reporte de partida. Todo 100% sin internet.',
+          ctaAppStore: 'Descargar en App Store',
+          ctaPlayStore: 'Descargar en Google Play',
+          heroNote: 'Gratis · 17+ · iOS y Android',
+          featuresTitle: '¿Por qué Drink It?',
+          feat1Title: '+60 cartas únicas',
+          feat1Desc: 'Acciones, minijuegos grupales, duelos, modificadores de reglas y mucho más.',
+          feat2Title: '100% sin internet',
+          feat2Desc: 'Sin internet, sin cuenta, sin rastreo. Todo en la palma de tu mano.',
+          feat3Title: 'Hasta 10 jugadores',
+          feat3Desc: 'De 2 a 10 jugadores con avatares y conteo individual de bebidas.',
+          feat4Title: '8 tipos de juego',
+          feat4Desc: 'Papa Caliente, Yo Nunca, Cascada, Duelo, Reglas y mucho más.',
+          feat5Title: 'Reporte al final',
+          feat5Desc: 'Mira el ranking y comparte el reporte de la fiesta con tus amigos.',
+          feat6Title: '3 idiomas',
+          feat6Desc: 'Portugués, inglés y español. Cambia el idioma en cualquier momento.',
+          screenshotsTitle: 'Mira cómo funciona',
+          howTitle: 'Cómo jugar',
+          step1Title: 'Añade los jugadores',
+          step1Desc: 'Ingresa los nombres de todos. Cada jugador tiene su avatar y conteo propio de bebidas.',
+          step2Title: 'Saca una carta',
+          step2Desc: 'Desliza para revelar la siguiente carta y descubre qué tiene preparado el juego.',
+          step3Title: 'Sigue las reglas y diviértete',
+          step3Desc: 'Minijuegos, duelos, cartas de reglas y la temida Papa Caliente — y al final, descubre quién bebió más.',
+          ageTitle: 'Contenido adulto',
+          ageDesc: 'Drink It está destinado a mayores de 17 años. La app contiene referencias al consumo de alcohol y no está dirigida a menores de 13 años.',
+          footerPrivacy: 'Política de Privacidad',
+          footerContact: 'Contacto',
+          footerRights: 'Todos los derechos reservados.',
+        },
+      };
+
+      const langFolders = { pt: 'ptbr', en: 'en', es: 'es' };
+
+      function setLang(lang) {
+        if (!t[lang]) return;
+        document.documentElement.lang = lang;
+        const tr = t[lang];
+
+        if (tr.pageTitle) document.title = tr.pageTitle;
+
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var key = el.dataset.i18n;
+          if (tr[key] !== undefined) el.textContent = tr[key];
+        });
+
+        document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+          var key = el.dataset.i18nHtml;
+          if (tr[key] !== undefined) el.innerHTML = tr[key];
+        });
+
+        document.querySelectorAll('[data-lang-img]').forEach(function (img) {
+          var imgName = img.dataset.langImg;
+          img.src = 'assets/' + langFolders[lang] + '/' + imgName + '.png';
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        try { localStorage.setItem('drink-it-lang', lang); } catch (e) {}
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+      });
+
+      var savedLang = 'pt';
+      try { savedLang = localStorage.getItem('drink-it-lang') || null; } catch (e) {}
+      if (!savedLang) {
+        var nav = (navigator.language || '').toLowerCase();
+        if (nav.startsWith('en')) savedLang = 'en';
+        else if (nav.startsWith('es')) savedLang = 'es';
+        else savedLang = 'pt';
+      }
+      setLang(savedLang);
+    </script>
+
+  </body>
+</html>

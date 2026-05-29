@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade — Drink It: Cards &amp; Shots</title>
+    <style>
+      :root {
+        --bg: hsl(224, 20%, 6%);
+        --surface: hsl(224, 18%, 10%);
+        --surface-raised: hsl(224, 16%, 14%);
+        --brand: hsl(262, 80%, 62%);
+        --brand-glow: hsla(262, 80%, 62%, 0.28);
+        --brand-subtle: hsla(262, 80%, 62%, 0.1);
+        --brand-border: hsla(262, 80%, 62%, 0.3);
+        --accent: hsl(38, 92%, 56%);
+        --fg: hsl(220, 14%, 96%);
+        --muted: hsl(220, 10%, 55%);
+        --subtle: hsl(220, 8%, 35%);
+        --border: hsl(224, 14%, 20%);
+        --success: hsl(142, 60%, 45%);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      a { color: var(--brand); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* ── NAV ──────────────────────────────────────────────────── */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: hsla(224, 20%, 6%, 0.88);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-inner {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+
+      .logo-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--brand);
+        box-shadow: 0 0 10px var(--brand-glow);
+        flex-shrink: 0;
+      }
+
+      .logo-name {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--fg);
+        letter-spacing: -0.02em;
+      }
+
+      .lang-switcher {
+        display: flex;
+        gap: 0.25rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.25rem;
+      }
+
+      .lang-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--muted);
+        padding: 0.25rem 0.65rem;
+        border-radius: 5px;
+        letter-spacing: 0.04em;
+        transition: color 0.15s, background 0.15s;
+        font-family: inherit;
+      }
+
+      .lang-btn:hover { color: var(--fg); }
+
+      .lang-btn.active {
+        background: var(--brand);
+        color: #fff;
+      }
+
+      /* ── CONTENT ──────────────────────────────────────────────── */
+      .page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.5rem 4rem;
+      }
+
+      header {
+        text-align: center;
+        padding: 3.5rem 0 2.5rem;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 2.5rem;
+      }
+
+      .header-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .header-logo-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--brand);
+        box-shadow: 0 0 12px var(--brand-glow);
+      }
+
+      .header-logo-text {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: var(--fg);
+        margin-bottom: 0.4rem;
+      }
+
+      .page-subtitle {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .updated {
+        display: inline-block;
+        margin-top: 1rem;
+        background: var(--surface-raised);
+        border: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.8rem;
+        padding: 0.25rem 0.8rem;
+        border-radius: 999px;
+      }
+
+      section.card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      h2 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--brand);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      h2::before {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 1.05rem;
+        background: var(--brand);
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      p {
+        color: var(--muted);
+        margin-bottom: 0.85rem;
+        font-size: 0.9375rem;
+      }
+
+      p:last-child { margin-bottom: 0; }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 0.5rem;
+      }
+
+      ul li {
+        color: var(--muted);
+        padding: 0.35rem 0 0.35rem 1.35rem;
+        position: relative;
+        font-size: 0.9375rem;
+      }
+
+      ul li::before {
+        content: '–';
+        position: absolute;
+        left: 0;
+        color: var(--subtle);
+      }
+
+      strong { color: var(--fg); font-weight: 600; }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--surface-raised);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.7rem 1rem;
+        margin-bottom: 0.75rem;
+        width: 100%;
+      }
+
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .badge-dot.green { background: var(--success); }
+      .badge-dot.amber { background: var(--accent); }
+
+      .badge-label {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--fg);
+      }
+
+      .badge-desc {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-left: auto;
+        text-align: right;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 3rem;
+        color: var(--subtle);
+        font-size: 0.8rem;
+      }
+
+      footer a { color: var(--muted); }
+
+      @media (max-width: 480px) {
+        h1 { font-size: 1.6rem; }
+        .badge { flex-wrap: wrap; }
+        .badge-desc { margin-left: 1.3rem; text-align: left; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">
+          <span class="logo-dot"></span>
+          <span class="logo-name">Drink It</span>
+        </a>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page">
+
+      <header>
+        <div class="header-logo">
+          <span class="header-logo-dot"></span>
+          <span class="header-logo-text">abag.tech</span>
+        </div>
+        <h1 data-i18n="pageTitle">Política de Privacidade</h1>
+        <p class="page-subtitle">Drink It: Cards &amp; Shots</p>
+        <span class="updated" data-i18n="lastUpdated">Atualizado em: 29 de maio de 2025</span>
+      </header>
+
+      <!-- OVERVIEW -->
+      <section class="card">
+        <h2 data-i18n="s1Title">Visão Geral</h2>
+        <p data-i18n="s1p1">
+          Drink It: Cards &amp; Shots é um jogo de cartas para beber totalmente offline. Estamos comprometidos com a proteção da sua privacidade. Esta política explica quais dados são coletados, por quem e como são utilizados.
+        </p>
+        <p data-i18n="s1p2">
+          O app não exige conta, não coleta nome, e-mail nem qualquer informação de identificação pessoal, e não transmite conteúdo gerado pelo usuário para nossos servidores.
+        </p>
+      </section>
+
+      <!-- DATA WE COLLECT -->
+      <section class="card">
+        <h2 data-i18n="s2Title">Dados Coletados</h2>
+
+        <div class="badge">
+          <span class="badge-dot green"></span>
+          <span class="badge-label" data-i18n="badge1Label">Nomes dos jogadores</span>
+          <span class="badge-desc" data-i18n="badge1Desc">Armazenados apenas no seu dispositivo</span>
+        </div>
+        <div class="badge">
+          <span class="badge-dot green"></span>
+          <span class="badge-label" data-i18n="badge2Label">Histórico de partidas e configurações</span>
+          <span class="badge-desc" data-i18n="badge2Desc">Armazenados apenas no seu dispositivo</span>
+        </div>
+        <div class="badge">
+          <span class="badge-dot amber"></span>
+          <span class="badge-label" data-i18n="badge3Label">Eventos de uso anônimos</span>
+          <span class="badge-desc" data-i18n="badge3Desc">Via Vexo Analytics — sem dados pessoais</span>
+        </div>
+        <div class="badge">
+          <span class="badge-dot amber"></span>
+          <span class="badge-label" data-i18n="badge4Label">Dados de publicidade</span>
+          <span class="badge-desc" data-i18n="badge4Desc">Via Google AdMob — veja abaixo</span>
+        </div>
+
+        <p data-i18n="s2p1">
+          Todos os dados locais (nomes dos jogadores, histórico de sessões, preferências) são armazenados exclusivamente no seu dispositivo usando armazenamento local seguro. Nunca são enviados ou compartilhados.
+        </p>
+      </section>
+
+      <!-- THIRD-PARTY SERVICES -->
+      <section class="card">
+        <h2 data-i18n="s3Title">Serviços de Terceiros</h2>
+        <p data-i18n="s3p1">O app integra os seguintes SDKs de terceiros, que podem coletar dados de forma independente:</p>
+        <ul>
+          <li>
+            <strong>Google AdMob</strong> — <span data-i18n="s3admob">exibe anúncios e pode coletar identificadores do dispositivo e dados de uso para segmentação. Regido pela</span>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-i18n="s3admobLink">Política de Privacidade do Google</a>.
+          </li>
+          <li>
+            <strong>Firebase Analytics &amp; Crashlytics</strong> — <span data-i18n="s3firebase">coleta relatórios de falhas anônimos e estatísticas de uso do app para ajudar a melhorar a estabilidade. Regido pela</span>
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" data-i18n="s3firebaseLink">Política de Privacidade do Firebase</a>.
+          </li>
+          <li>
+            <strong>Vexo Analytics</strong> — <span data-i18n="s3vexo">coleta dados de eventos anônimos (ex: partida iniciada, carta comprada) para entender como o app é usado. Nenhuma informação de identificação pessoal é associada a esses eventos.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ADVERTISING -->
+      <section class="card">
+        <h2 data-i18n="s4Title">Publicidade</h2>
+        <p data-i18n="s4p1">
+          O app exibe anúncios intersticiais do Google AdMob. Esses anúncios podem ser personalizados com base no identificador de publicidade do seu dispositivo (IDFA no iOS, GAID no Android).
+        </p>
+        <p data-i18n="s4p2">
+          Você pode desativar anúncios personalizados a qualquer momento pelas configurações do dispositivo: no iOS via <strong>Ajustes → Privacidade → Apple Advertising</strong>, e no Android via <strong>Configurações → Google → Anúncios → Cancelar personalização de anúncios</strong>.
+        </p>
+      </section>
+
+      <!-- CHILDREN'S PRIVACY -->
+      <section class="card">
+        <h2 data-i18n="s5Title">Privacidade de Crianças</h2>
+        <p data-i18n="s5p1">
+          Este app é destinado a usuários com 17 anos ou mais. Ele contém referências ao consumo de álcool e não é direcionado a crianças menores de 13 anos. Não coletamos conscientemente informações de crianças.
+        </p>
+      </section>
+
+      <!-- DATA RETENTION -->
+      <section class="card">
+        <h2 data-i18n="s6Title">Retenção e Exclusão de Dados</h2>
+        <p data-i18n="s6p1">
+          Todos os dados armazenados localmente (nomes dos jogadores, histórico de partidas) podem ser excluídos a qualquer momento desinstalando o app. Não mantemos nenhum dado em servidores externos.
+        </p>
+        <p data-i18n="s6p2">
+          Eventos de analytics anônimos são retidos pela Vexo e pelo Firebase de acordo com suas próprias políticas de retenção.
+        </p>
+      </section>
+
+      <!-- CHANGES -->
+      <section class="card">
+        <h2 data-i18n="s7Title">Alterações nesta Política</h2>
+        <p data-i18n="s7p1">
+          Podemos atualizar esta política de privacidade periodicamente. Qualquer alteração será refletida nesta página com uma data de atualização. O uso continuado do app após as alterações constitui aceitação da nova política.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="card">
+        <h2 data-i18n="s8Title">Contato</h2>
+        <p data-i18n="s8p1">Se você tiver dúvidas sobre esta política de privacidade, entre em contato:</p>
+        <p><a href="mailto:tech.abag@gmail.com">tech.abag@gmail.com</a></p>
+      </section>
+
+      <footer>
+        <p>&copy; abag.tech &mdash; Drink It: Cards &amp; Shots &nbsp;·&nbsp; <a href="index.html" data-i18n="footerBack">Voltar ao início</a></p>
+      </footer>
+
+    </div>
+
+    <script>
+      var t = {
+        pt: {
+          pageTitle: 'Política de Privacidade',
+          lastUpdated: 'Atualizado em: 29 de maio de 2025',
+          s1Title: 'Visão Geral',
+          s1p1: 'Drink It: Cards & Shots é um jogo de cartas para beber totalmente offline. Estamos comprometidos com a proteção da sua privacidade. Esta política explica quais dados são coletados, por quem e como são utilizados.',
+          s1p2: 'O app não exige conta, não coleta nome, e-mail nem qualquer informação de identificação pessoal, e não transmite conteúdo gerado pelo usuário para nossos servidores.',
+          s2Title: 'Dados Coletados',
+          badge1Label: 'Nomes dos jogadores',
+          badge1Desc: 'Armazenados apenas no seu dispositivo',
+          badge2Label: 'Histórico de partidas e configurações',
+          badge2Desc: 'Armazenados apenas no seu dispositivo',
+          badge3Label: 'Eventos de uso anônimos',
+          badge3Desc: 'Via Vexo Analytics — sem dados pessoais',
+          badge4Label: 'Dados de publicidade',
+          badge4Desc: 'Via Google AdMob — veja abaixo',
+          s2p1: 'Todos os dados locais (nomes dos jogadores, histórico de sessões, preferências) são armazenados exclusivamente no seu dispositivo usando armazenamento local seguro. Nunca são enviados ou compartilhados.',
+          s3Title: 'Serviços de Terceiros',
+          s3p1: 'O app integra os seguintes SDKs de terceiros, que podem coletar dados de forma independente:',
+          s3admob: 'exibe anúncios e pode coletar identificadores do dispositivo e dados de uso para segmentação. Regido pela',
+          s3admobLink: 'Política de Privacidade do Google',
+          s3firebase: 'coleta relatórios de falhas anônimos e estatísticas de uso do app para ajudar a melhorar a estabilidade. Regido pela',
+          s3firebaseLink: 'Política de Privacidade do Firebase',
+          s3vexo: 'coleta dados de eventos anônimos (ex: partida iniciada, carta comprada) para entender como o app é usado. Nenhuma informação de identificação pessoal é associada a esses eventos.',
+          s4Title: 'Publicidade',
+          s4p1: 'O app exibe anúncios intersticiais do Google AdMob. Esses anúncios podem ser personalizados com base no identificador de publicidade do seu dispositivo (IDFA no iOS, GAID no Android).',
+          s4p2: 'Você pode desativar anúncios personalizados a qualquer momento pelas configurações do dispositivo: no iOS via Ajustes → Privacidade → Apple Advertising, e no Android via Configurações → Google → Anúncios → Cancelar personalização de anúncios.',
+          s5Title: 'Privacidade de Crianças',
+          s5p1: 'Este app é destinado a usuários com 17 anos ou mais. Ele contém referências ao consumo de álcool e não é direcionado a crianças menores de 13 anos. Não coletamos conscientemente informações de crianças.',
+          s6Title: 'Retenção e Exclusão de Dados',
+          s6p1: 'Todos os dados armazenados localmente (nomes dos jogadores, histórico de partidas) podem ser excluídos a qualquer momento desinstalando o app. Não mantemos nenhum dado em servidores externos.',
+          s6p2: 'Eventos de analytics anônimos são retidos pela Vexo e pelo Firebase de acordo com suas próprias políticas de retenção.',
+          s7Title: 'Alterações nesta Política',
+          s7p1: 'Podemos atualizar esta política de privacidade periodicamente. Qualquer alteração será refletida nesta página com uma data de atualização. O uso continuado do app após as alterações constitui aceitação da nova política.',
+          s8Title: 'Contato',
+          s8p1: 'Se você tiver dúvidas sobre esta política de privacidade, entre em contato:',
+          footerBack: 'Voltar ao início',
+        },
+        en: {
+          pageTitle: 'Privacy Policy',
+          lastUpdated: 'Last updated: May 29, 2025',
+          s1Title: 'Overview',
+          s1p1: 'Drink It: Cards & Shots is a fully offline drinking card game. We are committed to protecting your privacy. This policy explains what data is collected, by whom, and how it is used.',
+          s1p2: 'The app does not require an account, does not collect your name, email, or any personally identifiable information, and does not transmit any user-generated content to our servers.',
+          s2Title: 'Data We Collect',
+          badge1Label: 'Player names',
+          badge1Desc: 'Stored locally on your device only',
+          badge2Label: 'Game history & settings',
+          badge2Desc: 'Stored locally on your device only',
+          badge3Label: 'Anonymous usage events',
+          badge3Desc: 'Via Vexo Analytics — no PII',
+          badge4Label: 'Advertising data',
+          badge4Desc: 'Via Google AdMob — see below',
+          s2p1: 'All local data (player names, session history, preferences) is stored exclusively on your device using secure local storage. It is never uploaded or shared.',
+          s3Title: 'Third-Party Services',
+          s3p1: 'The app integrates the following third-party SDKs that may collect data independently:',
+          s3admob: 'displays ads and may collect device identifiers and usage data for ad targeting. Governed by',
+          s3admobLink: "Google's Privacy Policy",
+          s3firebase: 'collects anonymous crash reports and app usage statistics to help us improve stability. Governed by',
+          s3firebaseLink: "Firebase's Privacy Policy",
+          s3vexo: 'collects anonymous event data (e.g. game started, card drawn) to help us understand how the app is used. No personally identifiable information is attached to these events.',
+          s4Title: 'Advertising',
+          s4p1: 'The app displays interstitial ads powered by Google AdMob. These ads may be personalized based on your device\'s advertising identifier (IDFA on iOS, GAID on Android).',
+          s4p2: 'You can opt out of personalized ads at any time through your device settings: on iOS via Settings → Privacy → Apple Advertising, and on Android via Settings → Google → Ads → Opt out of Ads Personalization.',
+          s5Title: "Children's Privacy",
+          s5p1: 'This app is intended for users aged 17 and older. It contains references to alcohol consumption and is not directed at children under the age of 13. We do not knowingly collect any information from children.',
+          s6Title: 'Data Retention & Deletion',
+          s6p1: 'All locally stored data (player names, game history) can be deleted at any time by uninstalling the app. We do not retain any data on external servers.',
+          s6p2: 'Anonymous analytics events are retained by Vexo and Firebase according to their own retention policies.',
+          s7Title: 'Changes to This Policy',
+          s7p1: 'We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date. Continued use of the app after changes constitutes acceptance of the new policy.',
+          s8Title: 'Contact',
+          s8p1: 'If you have any questions about this privacy policy, please contact us at:',
+          footerBack: 'Back to home',
+        },
+        es: {
+          pageTitle: 'Política de Privacidad',
+          lastUpdated: 'Última actualización: 29 de mayo de 2025',
+          s1Title: 'Resumen',
+          s1p1: 'Drink It: Cards & Shots es un juego de cartas para beber completamente sin conexión a internet. Nos comprometemos a proteger tu privacidad. Esta política explica qué datos se recopilan, por quién y cómo se utilizan.',
+          s1p2: 'La app no requiere cuenta, no recopila tu nombre, correo electrónico ni ningún tipo de información de identificación personal, y no transmite contenido generado por el usuario a nuestros servidores.',
+          s2Title: 'Datos que Recopilamos',
+          badge1Label: 'Nombres de los jugadores',
+          badge1Desc: 'Almacenados solo en tu dispositivo',
+          badge2Label: 'Historial de partidas y configuración',
+          badge2Desc: 'Almacenados solo en tu dispositivo',
+          badge3Label: 'Eventos de uso anónimos',
+          badge3Desc: 'Via Vexo Analytics — sin datos personales',
+          badge4Label: 'Datos de publicidad',
+          badge4Desc: 'Via Google AdMob — ver abajo',
+          s2p1: 'Todos los datos locales (nombres de jugadores, historial de sesiones, preferencias) se almacenan exclusivamente en tu dispositivo mediante almacenamiento local seguro. Nunca se cargan ni se comparten.',
+          s3Title: 'Servicios de Terceros',
+          s3p1: 'La app integra los siguientes SDKs de terceros que pueden recopilar datos de forma independiente:',
+          s3admob: 'muestra anuncios y puede recopilar identificadores del dispositivo y datos de uso para la segmentación de anuncios. Regido por la',
+          s3admobLink: 'Política de Privacidad de Google',
+          s3firebase: 'recopila informes de fallos anónimos y estadísticas de uso de la app para mejorar la estabilidad. Regido por la',
+          s3firebaseLink: 'Política de Privacidad de Firebase',
+          s3vexo: 'recopila datos de eventos anónimos (p. ej. partida iniciada, carta sacada) para entender cómo se usa la app. Ninguna información de identificación personal está asociada a estos eventos.',
+          s4Title: 'Publicidad',
+          s4p1: 'La app muestra anuncios intersticiales de Google AdMob. Estos anuncios pueden personalizarse según el identificador de publicidad de tu dispositivo (IDFA en iOS, GAID en Android).',
+          s4p2: 'Puedes desactivar los anuncios personalizados en cualquier momento desde la configuración del dispositivo: en iOS mediante Ajustes → Privacidad → Apple Advertising, y en Android mediante Configuración → Google → Anuncios → Inhabilitar personalización de anuncios.',
+          s5Title: 'Privacidad de los Niños',
+          s5p1: 'Esta app está destinada a usuarios de 17 años o más. Contiene referencias al consumo de alcohol y no está dirigida a menores de 13 años. No recopilamos conscientemente información de menores.',
+          s6Title: 'Retención y Eliminación de Datos',
+          s6p1: 'Todos los datos almacenados localmente (nombres de jugadores, historial de partidas) pueden eliminarse en cualquier momento desinstalando la app. No conservamos datos en servidores externos.',
+          s6p2: 'Los eventos de analytics anónimos son retenidos por Vexo y Firebase según sus propias políticas de retención.',
+          s7Title: 'Cambios en Esta Política',
+          s7p1: 'Podemos actualizar esta política de privacidad periódicamente. Cualquier cambio se reflejará en esta página con una fecha de actualización. El uso continuado de la app tras los cambios implica la aceptación de la nueva política.',
+          s8Title: 'Contacto',
+          s8p1: 'Si tienes preguntas sobre esta política de privacidad, contáctanos en:',
+          footerBack: 'Volver al inicio',
+        },
+      };
+
+      function setLang(lang) {
+        if (!t[lang]) return;
+        document.documentElement.lang = lang;
+        var tr = t[lang];
+
+        if (tr.pageTitle) document.title = tr.pageTitle + ' — Drink It: Cards & Shots';
+
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var key = el.dataset.i18n;
+          if (tr[key] !== undefined) el.textContent = tr[key];
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        try { localStorage.setItem('drink-it-lang', lang); } catch (e) {}
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+      });
+
+      var savedLang = null;
+      try { savedLang = localStorage.getItem('drink-it-lang'); } catch (e) {}
+      if (!savedLang) {
+        var nav = (navigator.language || '').toLowerCase();
+        if (nav.startsWith('en')) savedLang = 'en';
+        else if (nav.startsWith('es')) savedLang = 'es';
+        else savedLang = 'pt';
+      }
+      setLang(savedLang);
+    </script>
+
+  </body>
+</html>
