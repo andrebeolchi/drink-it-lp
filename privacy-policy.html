@@ -289,7 +289,7 @@
           <span class="logo-name">Drink It</span>
         </a>
         <div class="lang-switcher">
-          <button class="lang-btn" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="br">BR</button>
           <button class="lang-btn" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="es">ES</button>
         </div>
@@ -304,7 +304,7 @@
           <span class="header-logo-text">abag.tech</span>
         </div>
         <h1 data-i18n="pageTitle">Política de Privacidade</h1>
-        <p class="page-subtitle">Drink It: Cards &amp; Shots</p>
+        <p class="page-subtitle" data-i18n="appName">Drink It: Cards &amp; Shots</p>
         <span class="updated" data-i18n="lastUpdated">Atualizado em: 29 de maio de 2025</span>
       </header>
 
@@ -421,8 +421,9 @@
 
     <script>
       var t = {
-        pt: {
+        br: {
           pageTitle: 'Política de Privacidade',
+          appName: 'Bebe Aí: Cards & Shots',
           lastUpdated: 'Atualizado em: 29 de maio de 2025',
           s1Title: 'Visão Geral',
           s1p1: 'Drink It: Cards & Shots é um jogo de cartas para beber totalmente offline. Estamos comprometidos com a proteção da sua privacidade. Esta política explica quais dados são coletados, por quem e como são utilizados.',
@@ -460,6 +461,7 @@
         },
         en: {
           pageTitle: 'Privacy Policy',
+          appName: 'Drink It: Cards & Shots',
           lastUpdated: 'Last updated: May 29, 2025',
           s1Title: 'Overview',
           s1p1: 'Drink It: Cards & Shots is a fully offline drinking card game. We are committed to protecting your privacy. This policy explains what data is collected, by whom, and how it is used.',
@@ -497,6 +499,7 @@
         },
         es: {
           pageTitle: 'Política de Privacidad',
+          appName: 'Tómatela: Cards & Shots',
           lastUpdated: 'Última actualización: 29 de mayo de 2025',
           s1Title: 'Resumen',
           s1p1: 'Drink It: Cards & Shots es un juego de cartas para beber completamente sin conexión a internet. Nos comprometemos a proteger tu privacidad. Esta política explica qué datos se recopilan, por quién y cómo se utilizan.',
@@ -557,10 +560,11 @@
         btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
       });
 
-      var validLangs = ['pt', 'en', 'es'];
+      var validLangs = ['br', 'en', 'es'];
       var urlLang = new URLSearchParams(window.location.search).get('lang');
       var savedLang = null;
       try { savedLang = localStorage.getItem('drink-it-lang'); } catch (e) {}
+      if (savedLang === 'pt') savedLang = 'br';
       var finalLang =
         (validLangs.indexOf(urlLang) !== -1 ? urlLang : null) ||
         (validLangs.indexOf(savedLang) !== -1 ? savedLang : null) ||
@@ -568,7 +572,7 @@
           var nav = (navigator.language || '').toLowerCase();
           if (nav.startsWith('en')) return 'en';
           if (nav.startsWith('es')) return 'es';
-          return 'pt';
+          return 'br';
         })();
       setLang(finalLang);
     </script>
