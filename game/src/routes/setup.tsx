@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
+import { ChevronRight } from 'lucide-react'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
@@ -13,16 +14,11 @@ import type { Player } from '@/core/types/player'
 import { DECK } from '@/modules/deck/deck'
 import { createPlayer, getNextAvatarColor } from '@/modules/players/player-utils'
 
+import { LANGUAGES } from '@/components/kit/languages'
 import { Avatar } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Text } from '@/components/ui/text'
-
-const LANGUAGES = [
-  { code: 'pt-BR', label: '🇧🇷' },
-  { code: 'en-US', label: '🇺🇸' },
-  { code: 'es-ES', label: '🇪🇸' },
-] as const
 
 const schema = z.object({
   name: z.string().min(1).max(20),
@@ -125,7 +121,7 @@ export function Setup() {
                 <Text className="text-xs font-bold text-brand-foreground">{customCards.length}</Text>
               </span>
             ) : (
-              <Text className="text-sm text-muted">›</Text>
+              <ChevronRight className="h-4 w-4 text-muted" />
             )}
           </button>
 
@@ -139,7 +135,7 @@ export function Setup() {
                 <Text className="text-xs font-bold text-warning">{t('setup.minigames.disabledCount', { count: disabledCount })}</Text>
               </span>
             ) : (
-              <Text className="text-sm text-muted">›</Text>
+              <ChevronRight className="h-4 w-4 text-muted" />
             )}
           </button>
 
@@ -148,7 +144,7 @@ export function Setup() {
             className="flex items-center justify-between rounded-xl bg-surface px-3 py-3"
           >
             <Text className="text-sm font-medium text-foreground">{t('history.title')}</Text>
-            <Text className="text-sm text-muted">›</Text>
+            <ChevronRight className="h-4 w-4 text-muted" />
           </button>
         </div>
       </div>

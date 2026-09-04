@@ -1,3 +1,4 @@
+import { Bug, ChevronDown, Hand, Shield, Toilet, Users } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
@@ -10,6 +11,7 @@ import { DECK } from '@/modules/deck/deck'
 
 import { CardDispatcher } from '@/components/feature/card-dispatcher'
 import { ManagePlayersSheet } from '@/components/feature/manage-players-sheet'
+import { LANGUAGES } from '@/components/kit/languages'
 import { CARD_STRIPE_CLASSES } from '@/components/kit/theme'
 import { Avatar } from '@/components/ui/avatar'
 import { CategoryBadge } from '@/components/ui/badge'
@@ -17,12 +19,6 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/components/ui/cn'
 import { Modal } from '@/components/ui/modal'
 import { Text } from '@/components/ui/text'
-
-const LANGUAGES = [
-  { code: 'pt-BR', label: '🇧🇷' },
-  { code: 'en-US', label: '🇺🇸' },
-  { code: 'es-ES', label: '🇪🇸' },
-] as const
 
 export function Game() {
   const { t } = useTranslation('common')
@@ -102,9 +98,9 @@ export function Game() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setManagePlayersVisible(true)}
-            className="rounded-full border border-border px-2.5 py-1"
+            className="rounded-full border border-border p-1.5"
           >
-            <Text className="text-sm">👥</Text>
+            <Users className="h-4 w-4 text-muted" />
           </button>
           {LANGUAGES.map(({ code, label }) => (
             <button
@@ -117,7 +113,7 @@ export function Game() {
           ))}
           {import.meta.env.DEV && (
             <button onClick={() => setDebugVisible(true)} className="rounded-lg p-2 active:opacity-50">
-              🐞
+              <Bug className="h-4 w-4 text-subtle" />
             </button>
           )}
         </div>
@@ -133,7 +129,7 @@ export function Game() {
               onClick={() => hasInventory && setInventoryPlayerId(player.id)}
               className="flex shrink-0 flex-col items-center gap-1"
             >
-              {isCurrent ? <Text className="text-xs font-bold text-brand">▼</Text> : <div className="h-4" />}
+              {isCurrent ? <ChevronDown className="h-3 w-3 text-brand" /> : <div className="h-3" />}
               <Avatar name={player.name} avatarColor={player.avatarColor} size="md" />
               <Text truncate className={cn('w-16 text-center text-xs font-medium', isCurrent ? 'text-brand' : 'text-muted')}>
                 {player.name}
@@ -141,15 +137,24 @@ export function Game() {
               <Text className={cn('text-lg font-bold', player.drinkCount > 0 ? 'text-accent' : 'text-subtle')}>
                 {player.drinkCount}
               </Text>
-              <div className="flex h-5 items-center gap-0.5">
+              <div className="flex h-5 items-center gap-1 text-muted">
                 {player.inventory.shields > 0 && (
-                  <Text className="text-sm">{player.inventory.shields > 1 ? `${player.inventory.shields}🛡️` : '🛡️'}</Text>
+                  <span className="flex items-center gap-0.5 text-xs">
+                    <Shield className="h-3.5 w-3.5" />
+                    {player.inventory.shields > 1 && player.inventory.shields}
+                  </span>
                 )}
                 {player.inventory.bathroom > 0 && (
-                  <Text className="text-sm">{player.inventory.bathroom > 1 ? `${player.inventory.bathroom}🚽` : '🚽'}</Text>
+                  <span className="flex items-center gap-0.5 text-xs">
+                    <Toilet className="h-3.5 w-3.5" />
+                    {player.inventory.bathroom > 1 && player.inventory.bathroom}
+                  </span>
                 )}
                 {player.inventory.salute > 0 && (
-                  <Text className="text-sm">{player.inventory.salute > 1 ? `${player.inventory.salute}🫡` : '🫡'}</Text>
+                  <span className="flex items-center gap-0.5 text-xs">
+                    <Hand className="h-3.5 w-3.5" />
+                    {player.inventory.salute > 1 && player.inventory.salute}
+                  </span>
                 )}
               </div>
             </button>
@@ -210,16 +215,23 @@ export function Game() {
 
             {!saluteSelectMode ? (
               <>
-                {inventoryPlayer.inventory.bathroom > 0 && <Button onClick={handleUseBathroom}>🚽 {t('player.useBathroom')}</Button>}
+                {inventoryPlayer.inventory.bathroom > 0 && (
+                  <Button onClick={handleUseBathroom}>
+                    <Toilet className="h-4 w-4" /> {t('player.useBathroom')}
+                  </Button>
+                )}
                 {inventoryPlayer.inventory.shields > 0 && (
                   <div className="flex items-center gap-2 rounded-lg bg-success/10 px-3 py-2">
+                    <Shield className="h-4 w-4 text-success" />
                     <Text className="text-sm font-medium text-success">
-                      🛡️ {inventoryPlayer.inventory.shields}× {t('player.shield')}
+                      {inventoryPlayer.inventory.shields}x {t('player.shield')}
                     </Text>
                   </div>
                 )}
                 {inventoryPlayer.inventory.salute > 0 && (
-                  <Button onClick={() => setSaluteSelectMode(true)}>🫡 {t('player.useSalute')}</Button>
+                  <Button onClick={() => setSaluteSelectMode(true)}>
+                    <Hand className="h-4 w-4" /> {t('player.useSalute')}
+                  </Button>
                 )}
                 <Button
                   variant="secondary"
@@ -272,7 +284,8 @@ export function Game() {
           <Modal isVisible={debugVisible} onClose={() => setDebugVisible(false)} variant="bottomSheet">
             <div className="flex flex-col gap-4 px-5 pb-5 pt-5">
               <div className="flex items-center gap-2">
-                <Text className="text-base font-semibold text-foreground">🐞 Debug — Cards</Text>
+                <Bug className="h-4 w-4 text-subtle" />
+                <Text className="text-base font-semibold text-foreground">Debug: Cards</Text>
                 <div className="flex-1" />
                 <Button variant="ghost" size="sm" className="w-auto" onClick={() => setDebugVisible(false)}>
                   {t('common.close')}

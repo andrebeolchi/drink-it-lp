@@ -4,7 +4,7 @@
       "title": "Aponta pra alguém",
       "description": "Escolha uma pessoa para levar uma penalidade.",
       "shortRule": "1 pessoa leva",
-      "rules": "Selecione **1 jogador** na lista abaixo e confirme.\n\nEssa pessoa leva **1 penalidade**. Sem discussão — quem você apontou, perde."
+      "rules": "Selecione **1 jogador** na lista abaixo e confirme.\n\nEssa pessoa leva **1 penalidade**. Sem discussão: quem você apontou, perde."
     },
     "point_2": {
       "title": "Aponta pra dois",
@@ -40,13 +40,13 @@
       "title": "Reverso",
       "description": "A última pessoa que te penalizou agora leva o troco.",
       "shortRule": "Reverte a penalidade",
-      "rules": "Selecione **quem foi a última pessoa que te penalizou** durante o jogo.\n\nEssa pessoa leva **1 penalidade** agora.\n\nSe ninguém te penalizou ainda, a carta não tem efeito — passe a vez."
+      "rules": "Selecione **quem foi a última pessoa que te penalizou** durante o jogo.\n\nEssa pessoa leva **1 penalidade** agora.\n\nSe ninguém te penalizou ainda, a carta não tem efeito. Passe a vez."
     },
     "never_have_i": {
       "title": "Eu Nunca",
       "description": "O jogador faz uma afirmação começando com 'Eu nunca...'. Quem já fez leva uma penalidade.",
       "shortRule": "Quem já fez leva",
-      "rules": "O tirador da carta faz uma afirmação: **\"Eu nunca [algo]\"**.\n\nTodos os que **já fizeram** aquilo levam **1 penalidade**.\n\n**Exemplo:** *\"Eu nunca fui ao exterior\"* — quem já viajou leva.\n\nMarque quem levou na lista abaixo."
+      "rules": "O tirador da carta faz uma afirmação: **\"Eu nunca [algo]\"**.\n\nTodos os que **já fizeram** aquilo levam **1 penalidade**.\n\n**Exemplo:** *\"Eu nunca fui ao exterior\"*. Quem já viajou leva.\n\nMarque quem levou na lista abaixo."
     },
     "putinha": {
       "title": "Putinha",
@@ -64,13 +64,13 @@
       "title": "CS Composto",
       "description": "Proibido falar palavras que começam com C ou S, e palavras compostas. Quem errar perde.",
       "shortRule": "Sem C, S ou compostas",
-      "rules": "Quem tirou a carta decide um tema e fala uma palavra. Em sentido horário todos devem falar uma palavra dentro do tema escolhido — mas com restrições:\n\n**Proibido:**\n- Palavras que começam com **C** ou **S**\n- Palavras **compostas** (ex: guarda-chuva, beija-flor, pé-de-moleque)\n\nQuem falar uma palavra proibida **perde**."
+      "rules": "Quem tirou a carta decide um tema e fala uma palavra. Em sentido horário todos devem falar uma palavra dentro do tema escolhido, mas com restrições:\n\n**Proibido:**\n- Palavras que começam com **C** ou **S**\n- Palavras **compostas** (ex: guarda-chuva, beija-flor, pé-de-moleque)\n\nQuem falar uma palavra proibida **perde**."
     },
     "frog_game": {
       "title": "Jogo do Sapo",
       "description": "Em sentido horário, cada um diz uma palavra da sequência: Um → Sapo → Caiu → Na → Lagoa → Ploft. A contagem cresce a cada rodada. Quem errar perde.",
       "shortRule": "Um sapo caiu na lagoa, ploft!",
-      "rules": "Em sentido **horário** a partir do tirador, cada jogador diz **uma palavra** da sequência:\n\n**Um → Sapo → Caiu → Na → Lagoa → Ploft**\n\nApós o \"Ploft\", começa o número **Dois** — mas agora cada palavra se repete duas vezes:\n\n*Dois → Dois → Sapo → Sapo → Caiu → Caiu → Na → Na → Lagoa → Lagoa → Ploft → Ploft*\n\nA cada nova rodada a repetição aumenta. O jogo não para entre rodadas.\n\nQuem **hesitar** ou falar a palavra **errada** perde."
+      "rules": "Em sentido **horário** a partir do tirador, cada jogador diz **uma palavra** da sequência:\n\n**Um → Sapo → Caiu → Na → Lagoa → Ploft**\n\nApós o \"Ploft\", começa o número **Dois**, mas agora cada palavra se repete duas vezes:\n\n*Dois → Dois → Sapo → Sapo → Caiu → Caiu → Na → Na → Lagoa → Lagoa → Ploft → Ploft*\n\nA cada nova rodada a repetição aumenta. O jogo não para entre rodadas.\n\nQuem **hesitar** ou falar a palavra **errada** perde."
     },
     "pim_pow_pam": {
       "title": "Pim Pow Pam",
@@ -82,7 +82,7 @@
       "title": "Continência",
       "description": "Fique atento aos gestos! O último a fazer continência discretamente perde.",
       "shortRule": "O último a imitar a continência perde",
-      "rules": "Quem tirou a carta deve, em **qualquer momento** do jogo e da forma mais **discreta possível**, colocar a mão na testa em sinal de continência (🫡).\n\nA partir do momento que notarem, todos os outros jogadores devem imitar o gesto o mais rápido possível.\n\nO **último** a perceber e fazer o gesto **perde**."
+      "rules": "Quem tirou a carta deve, em **qualquer momento** do jogo e da forma mais **discreta possível**, colocar a mão na testa em sinal de continência.\n\nA partir do momento que notarem, todos os outros jogadores devem imitar o gesto o mais rápido possível.\n\nO **último** a perceber e fazer o gesto **perde**."
     },
     "jokenpo": {
       "title": "Jokenpô",
@@ -94,7 +94,7 @@
       "title": "Olho no Olho",
       "description": "Todos olham para baixo. Contagem 3-2-1 e todos olham para alguém. As duas pessoas que cruzarem o olhar levam uma penalidade.",
       "shortRule": "Quem cruzar olhar perde",
-      "rules": "Todos os jogadores **olham para baixo**. O app faz uma contagem **3-2-1**.\n\nNo *\"Olhem para cima!\"*, todos devem olhar diretamente para outra pessoa **ao mesmo tempo**.\n\n- Quem cruzar o olhar com alguém **perde** — os dois\n- O tirador seleciona na lista **quais jogadores** se encararam"
+      "rules": "Todos os jogadores **olham para baixo**. O app faz uma contagem **3-2-1**.\n\nNo *\"Olhem para cima!\"*, todos devem olhar diretamente para outra pessoa **ao mesmo tempo**.\n\n- Quem cruzar o olhar com alguém **perde**: os dois\n- O tirador seleciona na lista **quais jogadores** se encararam"
     },
     "add_rule": {
       "title": "Põe Regra",
@@ -112,7 +112,7 @@
       "title": "Escudo",
       "description": "Você ganhou um escudo! Na próxima vez que for levar uma penalidade, o escudo bloqueia.",
       "shortRule": "+1 escudo",
-      "rules": "Você ganhou um **escudo**.\n\nEle fica no seu inventário e é usado **automaticamente** na próxima vez que você for levar uma penalidade — ela é bloqueada e o escudo some.\n\n- Uso **único**\n- Você só pode ter **1 escudo** ativo por vez\n- O escudo bloqueia qualquer tipo de penalidade"
+      "rules": "Você ganhou um **escudo**.\n\nEle fica no seu inventário e é usado **automaticamente** na próxima vez que você for levar uma penalidade: ela é bloqueada e o escudo some.\n\n- Uso **único**\n- Você só pode ter **1 escudo** ativo por vez\n- O escudo bloqueia qualquer tipo de penalidade"
     },
     "bathroom": {
       "title": "Banheiro",
