@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Backgrounds — petrol blue family */
+  --background: 200 38% 5%;
+  --surface: 200 30% 9%;
+  --surface-raised: 200 25% 13%;
+  --surface-overlay: 200 22% 17%;
+
+  /* Brand — teal, primary action color */
+  --brand: 185 70% 46%;
+  --brand-foreground: 0 0% 100%;
+
+  /* Accent — red for drink counts and highlights */
+  --accent: 4 90% 65%;
+  --accent-foreground: 0 0% 100%;
+
+  /* Semantic — game outcomes */
+  --success: 142 60% 45%;
+  --success-foreground: 0 0% 100%;
+  --danger: 4 90% 58%;
+  --danger-foreground: 0 0% 100%;
+  --warning: 38 92% 56%;
+  --warning-foreground: 200 38% 5%;
+
+  /* Text */
+  --foreground: 210 20% 97%;
+  --muted: 205 14% 60%;
+  --subtle: 205 10% 38%;
+
+  /* Card category colors */
+  --card-action: 4 90% 58%;
+  --card-group: 210 72% 55%;
+  --card-game: 38 92% 56%;
+  --card-reflex: 185 68% 44%;
+  --card-showdown: 316 72% 60%;
+  --card-modifier: 142 60% 45%;
+  --card-benefit: 185 68% 44%;
+
+  /* Avatar palette */
+  --avatar-coral: 4 86% 58%;
+  --avatar-violet: 262 80% 62%;
+  --avatar-cyan: 199 80% 55%;
+  --avatar-amber: 38 92% 56%;
+  --avatar-green: 142 60% 45%;
+  --avatar-pink: 316 72% 60%;
+  --avatar-sky: 210 80% 58%;
+  --avatar-lime: 84 68% 48%;
+
+  /* Borders */
+  --border: 200 28% 18%;
+  --border-strong: 200 24% 26%;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  overscroll-behavior-y: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 150ms ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 150ms ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 200ms ease-out;
+}

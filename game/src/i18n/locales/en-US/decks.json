@@ -1,0 +1,136 @@
+{
+  "cards": {
+    "point_1": {
+      "title": "Point at Someone",
+      "description": "Choose one person to take a penalty.",
+      "shortRule": "1 person gets penalized",
+      "rules": "Select **1 player** from the list below and confirm.\n\nThat person takes **1 penalty**. No arguments — whoever you point at, loses."
+    },
+    "point_2": {
+      "title": "Point at Two",
+      "description": "Choose two people to take a penalty.",
+      "shortRule": "2 people get penalized",
+      "rules": "Select **2 players** from the list below and confirm.\n\nBoth take **1 penalty each**. You can point at whoever you want."
+    },
+    "point_3": {
+      "title": "Point at Three",
+      "description": "Choose three people to take a penalty.",
+      "shortRule": "3 people get penalized",
+      "rules": "Select **3 players** from the list below and confirm.\n\nAll three take **1 penalty each**. You can point at whoever you want."
+    },
+    "all_men": {
+      "title": "All Men",
+      "description": "All men at the table take a penalty.",
+      "shortRule": "Men get penalized",
+      "rules": "All **men** present in the match take **1 penalty**.\n\nSelect all of them from the list to update the leaderboard."
+    },
+    "all_women": {
+      "title": "All Women",
+      "description": "All women at the table take a penalty.",
+      "shortRule": "Women get penalized",
+      "rules": "All **women** present in the match take **1 penalty**.\n\nSelect all of them from the list to update the leaderboard."
+    },
+    "everyone": {
+      "title": "Everyone Loses",
+      "description": "Everyone at the table takes a penalty.",
+      "shortRule": "Everyone gets penalized",
+      "rules": "**Everyone** at the table takes **1 penalty**.\n\nSelect all players from the list to update the leaderboard."
+    },
+    "reverso": {
+      "title": "Reverse",
+      "description": "The last person who penalized you now takes the hit.",
+      "shortRule": "Reverses the penalty",
+      "rules": "Select **who was the last person that penalized you** during the game.\n\nThat person takes **1 penalty** now.\n\nIf nobody penalized you yet, the card has no effect — pass your turn."
+    },
+    "never_have_i": {
+      "title": "Never Have I Ever",
+      "description": "The player makes a statement starting with 'Never have I ever...'. Anyone who has done it gets a penalty.",
+      "shortRule": "Whoever has done it loses",
+      "rules": "The card drawer makes a statement: **\"Never have I ever [done something]\"**.\n\nEveryone who **has already done** that takes **1 penalty**.\n\n**Example:** *\"Never have I ever been abroad\"* — anyone who has traveled gets penalized.\n\nMark whoever lost on the list below."
+    },
+    "putinha": {
+      "title": "Sidekick Game",
+      "description": "Choose a player. Every time you get penalized, that person does too (up to 3 times).",
+      "shortRule": "Linked player gets penalized along",
+      "rules": "The card drawer chooses **1 player** to link to themselves.\n\nFor the next **3 times** the drawer gets penalized, the linked player gets penalized along automatically.\n\n- The link appears in the **active rules bar** at the top\n- It disappears automatically after 3 penalties\n- The linked player cannot refuse"
+    },
+    "pi_game": {
+      "title": "The Pi Game",
+      "description": "Count around the table. Say 'Pi' instead of multiples of 3 or numbers containing the digit 3 (e.g., 13, 30, 33). Whoever messes up loses.",
+      "shortRule": "Multiple of 3 or contains 3 = Pi",
+      "rules": "Count out loud around the table **clockwise**, starting with the drawer.\n\n**Rule:** every time the number is a **multiple of 3** (3, 6, 9...) **or contains the digit 3** (13, 23, 30, 31, 32, 33...), say **\"Pi\"** instead of the number.\n\n- Whoever says the wrong number **loses**\n- Whoever forgets to say Pi **loses**\n- The round continues until someone messes up"
+    },
+    "cs_compound": {
+      "title": "No C, M, or Compound Words",
+      "description": "Forbidden to say words starting with C or M, and compound words. Whoever messes up loses.",
+      "shortRule": "No C, M, or compound words",
+      "rules": "The card drawer chooses a theme and says a starting word. Going clockwise, everyone must say a single word within that theme — but with strict restrictions:\n\n**Forbidden:**\n- Words starting with the letters **C** or **M** (Watch out for automatic answers like *Car*, *Coffee*, *Movie*, *Milk*...)\n- **Compound words** made by joining two words together into one (e.g., *Cupcake*, *Basketball*, *Raincoat*, *Sunscreen*)\n\nWhoever says a forbidden word, repeats a word, or takes too long **loses**."
+    },
+    "frog_game": {
+      "title": "The Frog Game",
+      "description": "Going clockwise, everyone says one word from the sequence: One → Frog → Fell → Into → The → Pond → Splash. The count grows each round. Whoever messes up loses.",
+      "shortRule": "One frog fell into the pond, splash!",
+      "rules": "Going **clockwise** starting from the drawer, each player says **one word** of the sequence:\n\n**One → Frog → Fell → Into → The → Pond → Splash**\n\nAfter \"Splash\", the number **Two** begins — but now each word repeats twice:\n\n*Two → Two → Frog → Frog → Fell → Fell → Into → Into → The → The → Pond → Pond → Splash → Splash*\n\nWith each new round, the repetition increases. The game doesn't stop between rounds.\n\nWhoever **hesitates** or says the **wrong** word loses."
+    },
+    "pim_pow_pam": {
+      "title": "Pim Pow Pam",
+      "description": "Play Pim Pow Pam around the table. Whoever messes up the sequence or the direction loses.",
+      "shortRule": "Pim and Pow follow the circle; on Pam, point to the next!",
+      "rules": "The card drawer starts by saying **\"Pim\"**. The next player clockwise says **\"Pow\"**. The third player must say **\"Pam\"** and, obligatorily, **point at any person** at the table. The game immediately restarts with the pointed person saying **\"Pim\"**, and the sequence continues from them.\n\n**Loses who:**\n- Says the wrong word in the sequence\n- Takes too long to answer\n- Forgets to point on \"Pam\"\n- Says \"Pim\" out of turn (without being pointed at in the previous turn)"
+    },
+    "salute": {
+      "title": "Salute",
+      "description": "Pay attention to gestures! The last one to salute discreetly loses.",
+      "shortRule": "The last one to copy the salute loses",
+      "rules": "The card drawer must, at **any moment** of the game and as **discreetly as possible**, place their hand to their forehead in a salute gesture (🫡).\n\nAs soon as they notice, all other players must copy the gesture as fast as possible.\n\nThe **last** one to notice and do the gesture **loses**."
+    },
+    "jokenpo": {
+      "title": "Rock-Paper-Scissors",
+      "description": "Challenge someone to a Rock-Paper-Scissors duel. Best of 3. Whoever loses gets penalized.",
+      "shortRule": "Best of 3 wins",
+      "rules": "The drawer chooses **1 opponent**.\n\nPlay **Rock-Paper-Scissors**, best of 3 rounds.\n\nWhoever gets **fewer wins gets penalized**.\n\nIn case of a tie after 3 rounds, play an extra round until the tie is broken."
+    },
+    "eye_to_eye": {
+      "title": "Eye to Eye",
+      "description": "Everyone looks down. A 3-2-1 countdown plays, and everyone looks up at someone. The two people who lock eyes get penalized.",
+      "shortRule": "Locking eyes means a penalty",
+      "rules": "All players **look down**. The app plays a **3-2-1** countdown.\n\nOn *\"Look up!\"*, everyone must look directly at another person **at the same time**.\n\n- Anyone who locks eyes with someone **gets penalized** — both of them\n- The drawer selects from the list **which players** stared at each other"
+    },
+    "add_rule": {
+      "title": "Add a Rule",
+      "description": "Create a rule that will last for the rest of the game. Whoever breaks it gets penalized.",
+      "shortRule": "New rule comes into effect",
+      "rules": "The drawer invents **any rule** that will apply for the rest of the game.\n\n**Examples:**\n- *\"No swearing allowed\"*\n- *\"Everyone uses their left hand\"*\n- *\"Whoever laughs loses\"*\n- *\"Forbidden to say anyone's name\"*\n\nThe rule stays visible in the **top bar** of the screen. Whoever breaks it **gets penalized**."
+    },
+    "remove_rule": {
+      "title": "Remove a Rule",
+      "description": "Remove an active rule from the game.",
+      "shortRule": "Removes a rule",
+      "rules": "Removes **one of the active rules** from the game.\n\nActive rules appear in the **top bar** of the screen. After removing it, the rule instantly stops applying.\n\nIf there are no active rules, the card has no effect."
+    },
+    "shield": {
+      "title": "Shield",
+      "description": "You won a shield! Next time you are supposed to be penalized, the shield blocks it.",
+      "shortRule": "+1 shield",
+      "rules": "You won a **shield**.\n\nIt goes into your inventory and is used **automatically** the next time you have to take a penalty — it is blocked and the shield disappears.\n\n- **Single** use\n- You can only have **1 active shield** at a time\n- The shield blocks any type of penalty"
+    },
+    "bathroom": {
+      "title": "Bathroom Pass",
+      "description": "You won a free trip to the bathroom. Use it whenever you want without getting penalized.",
+      "shortRule": "+1 free bathroom trip",
+      "rules": "You won a **free trip to the bathroom**.\n\nWhen you need to leave during the game, use the pass and go without taking a penalty.\n\n- **Single** use and non-transferable\n- Can be used at any time\n- Without the pass, leaving without a penalty is forbidden"
+    },
+    "hot_potato": {
+      "title": "Hot Potato",
+      "description": "Pass the 'potato' quickly! When the time runs out, whoever is holding it gets penalized.",
+      "shortRule": "Don't get stuck with the potato!",
+      "rules": "Tap **\"Start timer\"** to begin.\n\nPass an object quickly to any person.\n\nWhen the timer ends and the sound **explodes**, whoever is holding the potato **gets penalized**.\n\nSelect the unlucky one from the list."
+    },
+    "duck_game": {
+      "title": "Duck What?",
+      "description": "Going clockwise, say 'duck' to pass to the next. 'What?' reverses the direction. 'Quack' skips the next person. Whoever messes up loses.",
+      "shortRule": "Duck, what?, quack!",
+      "rules": "Going **clockwise** starting from the drawer, each player uses one of three words:\n\n- **\"Duck\"** → passes the turn to the next player\n- **\"What?\"** → reverses the direction of the round\n- **\"Quack\"** → skips the next player\n\nWhoever **hesitates**, says the **wrong word**, or acts **out of order** loses."
+    }
+  }
+}

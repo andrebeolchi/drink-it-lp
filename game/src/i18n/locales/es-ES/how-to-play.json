@@ -1,0 +1,23 @@
+{
+  "onboarding": {
+    "slide1": {
+      "title": "¡Bienvenido a Sueca!",
+      "body": "El juego de cartas más divertido para animar cualquier fiesta. ¡No requiere internet!"
+    },
+    "slide2": {
+      "title": "Cómo funciona",
+      "body": "Registra a los jugadores, baraja el mazo y saca cartas. Cada carta trae un desafío diferente. ¡Diviértete y juega con estilo!"
+    },
+    "slide3": {
+      "title": "Reglas especiales",
+      "body": "Los escudos bloquean penalizaciones. Los modificadores cambian las reglas del juego. La Patata Caliente tiene un temporizador sorpresa. ¡Buena suerte!"
+    }
+  },
+  "help": {
+    "general": "Saca cartas y sigue las instrucciones. El jugador en turno decide quién pierde cuando la carta lo pida.",
+    "modifiers": "Los modificadores son reglas especiales que se quedan activas hasta que se eliminen. Estate atento al banner en la parte superior.",
+    "shields": "Los escudos bloquean automáticamente la siguiente penalización que recibas. Cada escudo te protege una vez.",
+    "hotPotato": "La Patata Caliente tiene un temporizador oculto. ¡Pásala rápido! Quien la tenga cuando se acabe el tiempo, pierde.",
+    "bathroom": "El beneficio de Pase de Baño permite una ida al baño sin penalización. ¡Úsalo sabiamente!"
+  }
+}
