@@ -48,12 +48,12 @@ Game state persists to `localStorage` instead of the app's MMKV, and ads/analyti
 
 ### Rebuilding
 
-This repo has no CI build step, so the compiled `jogar/` folder is committed directly and must be rebuilt by hand after any change to `game/`:
+GitHub Pages has no CI build step, so the compiled `jogar/` folder is committed directly and must be rebuilt by hand after any change to `game/`:
 
 ```bash
 cd game
 npm install     # first time only
-npm run build   # outputs straight into ../jogar
+npm run build   # builds to game/dist, then a postbuild step syncs it to ../jogar
 git add ../jogar
 ```
 
@@ -61,6 +61,12 @@ Useful commands from `game/`:
 
 ```bash
 npm run dev     # local dev server with hot reload
-npm run build   # typecheck + production build to ../jogar
+npm run build   # typecheck + production build to dist/, synced to ../jogar
 npm run lint    # ESLint
 ```
+
+Vite's own `outDir` is `game/dist` (not `../jogar` directly) because a Vercel
+project is also connected to this repo with `game` as its root directory —
+Vercel builds `game/` and expects the output inside it. The `postbuild`
+script (`scripts/sync-to-jogar.mjs`) copies `dist/` to `../jogar` afterward so
+both deployments stay in sync from one `npm run build`.
