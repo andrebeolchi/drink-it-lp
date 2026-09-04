@@ -1,3 +1,4 @@
+import { Bomb, Check, Flame } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -81,22 +82,23 @@ export function HotPotatoCard({ card, onComplete }: CardProps) {
       {phase === 'idle' && (
         <div className="mt-4">
           <Button size="lg" onClick={handleStart}>
-            🥔 {t('card.startTimer', { ns: 'common' })}
+            <Flame className="h-5 w-5" /> {t('card.startTimer', { ns: 'common' })}
           </Button>
         </div>
       )}
 
       {phase === 'playing' && (
         <div className="mt-4 flex flex-col items-center gap-3 rounded-lg bg-warning/10 p-4">
-          <Text className="text-4xl">🥔</Text>
+          <Flame className="h-10 w-10 text-warning" />
           <Text className="text-sm font-semibold text-warning">{t('card.potatoRunning', { ns: 'common' })}</Text>
         </div>
       )}
 
       {phase === 'exploded' && (
         <div className="mt-4 flex flex-col gap-3">
-          <div className="flex items-center justify-center rounded-lg bg-danger/10 p-3">
-            <Text className="text-2xl font-bold text-danger">💥 {t('card.exploded', { ns: 'common' })}</Text>
+          <div className="flex items-center justify-center gap-2 rounded-lg bg-danger/10 p-3">
+            <Bomb className="h-6 w-6 text-danger" />
+            <Text className="text-2xl font-bold text-danger">{t('card.exploded', { ns: 'common' })}</Text>
           </div>
           <Text className="text-sm font-medium text-muted">{t('card.whoHadPotato', { ns: 'common' })}</Text>
           <div className="flex max-h-56 flex-col gap-2 overflow-y-auto">
@@ -116,7 +118,7 @@ export function HotPotatoCard({ card, onComplete }: CardProps) {
                     {player.name}
                   </Text>
                   <PlayerInventoryIcons inventory={player.inventory} />
-                  {isSelected && <Text className="text-sm font-bold text-danger">✓</Text>}
+                  {isSelected && <Check className="h-4 w-4 text-danger" />}
                 </button>
               )
             })}

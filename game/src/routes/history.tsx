@@ -1,3 +1,4 @@
+import { X } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
@@ -38,7 +39,7 @@ export function History() {
           {t('history.title')}
         </Text>
         <Button variant="ghost" size="sm" className="w-auto" onClick={() => navigate(-1)}>
-          ✕
+          <X className="h-4 w-4" />
         </Button>
       </div>
 

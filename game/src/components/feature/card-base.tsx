@@ -1,3 +1,4 @@
+import { X } from 'lucide-react'
 import { useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -68,7 +69,7 @@ export function CardBase({ card, title, description, onSkip, children }: Props) 
               {title}
             </Text>
             <button onClick={() => setRulesVisible(false)}>
-              <Text className="text-sm text-muted">✕</Text>
+              <X className="h-4 w-4 text-muted" />
             </button>
           </div>
           <SimpleMarkdown content={rules} />

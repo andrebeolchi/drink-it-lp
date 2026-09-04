@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -110,7 +111,7 @@ function EyeToEyeCard({ card, onComplete }: CardProps) {
                   {player.name}
                 </Text>
                 <PlayerInventoryIcons inventory={player.inventory} />
-                {isSelected && <Text className="text-sm font-bold text-brand">✓</Text>}
+                {isSelected && <Check className="h-4 w-4 text-brand" />}
               </button>
             )
           })}

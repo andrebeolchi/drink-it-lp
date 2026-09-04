@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
+import { ChevronLeft } from 'lucide-react'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
@@ -48,8 +49,9 @@ export function CustomCards() {
     <div className="flex flex-1 flex-col bg-background">
       <div className="flex flex-1 flex-col gap-6 overflow-y-auto px-6 pt-6">
         <div className="flex items-center justify-between">
-          <button onClick={() => navigate(-1)} className="py-1 pr-3">
-            <Text className="text-sm text-brand">← {t('common.cancel')}</Text>
+          <button onClick={() => navigate(-1)} className="flex items-center gap-0.5 py-1 pr-3">
+            <ChevronLeft className="h-4 w-4 text-brand" />
+            <Text className="text-sm text-brand">{t('common.cancel')}</Text>
           </button>
           <Text as="h1" className="font-syne text-xl font-bold text-foreground">
             {t('setup.customCards.title')}

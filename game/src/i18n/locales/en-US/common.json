@@ -39,7 +39,16 @@
     "activeModifiers": "Active Rule",
     "noCards": "No more cards!",
     "recentCards": "Recent cards",
-    "helpTitle": "How to Play"
+    "helpTitle": "How to Play",
+    "managePlayers": {
+      "button": "Players",
+      "title": "Players",
+      "removed": "Removed",
+      "remove": "Remove",
+      "minPlayersHint": "The game needs at least 2 players.",
+      "addPlaceholder": "New player's name",
+      "addNew": "Add to game"
+    }
   },
   "results": {
     "title": "Results",
