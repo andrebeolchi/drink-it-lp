@@ -1,15 +1,14 @@
-import { toBlob, toPng } from 'html-to-image'
+import { toBlob } from 'html-to-image'
 
 import { Analytics } from '@/core/analytics'
 
 async function captureNode(node: HTMLElement): Promise<Blob> {
-  const blob = await toBlob(node, { pixelRatio: 2 })
+  // skipFonts: the card's Google Fonts stylesheet is cross-origin without
+  // CORS headers, so html-to-image can't read its cssRules to embed it —
+  // it isn't needed anyway since every color/size here is a literal value.
+  const blob = await toBlob(node, { pixelRatio: 2, skipFonts: true })
   if (!blob) throw new Error('Failed to capture ranking card')
   return blob
-}
-
-export async function captureRankingCardAsDataUri(node: HTMLElement): Promise<string> {
-  return toPng(node, { pixelRatio: 2 })
 }
 
 function downloadBlob(blob: Blob, filename: string) {
