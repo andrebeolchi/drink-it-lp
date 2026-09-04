@@ -1,0 +1,23 @@
+{
+  "onboarding": {
+    "slide1": {
+      "title": "Welcome to Party It!",
+      "body": "The funniest card game to liven up any party. No internet required!"
+    },
+    "slide2": {
+      "title": "How it works",
+      "body": "Register the players, shuffle the deck, and draw cards. Each card brings a different challenge — have fun and play fair!"
+    },
+    "slide3": {
+      "title": "Special rules",
+      "body": "Shields block penalties. Modifiers change the game rules. Hot Potato has a surprise timer. Good luck!"
+    }
+  },
+  "help": {
+    "general": "Draw cards and follow the instructions. The current player decides who gets penalized when the card asks to.",
+    "modifiers": "Modifiers are special rules that stay active until they are removed. Keep an eye on the banner at the top of the screen.",
+    "shields": "Shields automatically block the next penalty you receive. Each shield protects you once.",
+    "hotPotato": "The Hot Potato has a hidden timer. Pass it fast! Whoever is holding it when the time runs out gets penalized.",
+    "bathroom": "The Bathroom benefit allows a trip to the restroom without a penalty. Use it wisely!"
+  }
+}

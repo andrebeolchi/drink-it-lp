@@ -1,0 +1,10 @@
+export type MinigameType =
+  | 'DIRECT_TARGET'
+  | 'GROUP_DYNAMIC'
+  | 'SEQUENTIAL_GAME'
+  | 'REFLEX_GAME'
+  | 'SHOWDOWN'
+  | 'MODIFIER'
+  | 'BENEFIT'
+  | 'HOT_POTATO'
+  | 'REVERSO'

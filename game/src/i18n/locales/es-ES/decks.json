@@ -1,0 +1,136 @@
+{
+  "cards": {
+    "point_1": {
+      "title": "Señala a alguien",
+      "description": "Elige a una persona para que reciba una penalización.",
+      "shortRule": "1 persona pierde",
+      "rules": "Selecciona **1 jugador** en la lista de abajo y confirma.\n\nEsa persona recibe **1 penalización**. Sin discusiones: a quien señale, pierde."
+    },
+    "point_2": {
+      "title": "Señala a dos",
+      "description": "Elige a dos personas para que reciban una penalización.",
+      "shortRule": "2 personas pierden",
+      "rules": "Selecciona **2 jugadores** en la lista de abajo y confirma.\n\nLos dos reciben **1 penalización cada uno**. Puedes señalar a quien quieras."
+    },
+    "point_3": {
+      "title": "Señala a tres",
+      "description": "Elige a tres personas para que reciban una penalización.",
+      "shortRule": "3 personas pierden",
+      "rules": "Selecciona **3 jugadores** en la lista de abajo y confirma.\n\nLos tres reciben **1 penalización cada uno**. Puedes señalar a quien quieras."
+    },
+    "all_men": {
+      "title": "Todos los hombres",
+      "description": "Todos los hombres de la mesa reciben una penalización.",
+      "shortRule": "Hombres pierden",
+      "rules": "Todos los **hombres** presentes en la partida reciben **1 penalización**.\n\nSelecciónalos a todos en la lista para registrarlos en el marcador."
+    },
+    "all_women": {
+      "title": "Todas las mujeres",
+      "description": "Todas las mujeres de la mesa reciben una penalización.",
+      "shortRule": "Mujeres pierden",
+      "rules": "Todas las **mujeres** presentes en la partida reciben **1 penalización**.\n\nSelecciónalas a todas en la lista para registrarlas en el marcador."
+    },
+    "everyone": {
+      "title": "Todos pierden",
+      "description": "Todo el mundo en la mesa recibe una penalización.",
+      "shortRule": "Todos pierden",
+      "rules": "**Todo el mundo** en la mesa recibe **1 penalización**.\n\nSelecciona a todos los jugadores en la lista para registrarlos en el marcador."
+    },
+    "reverso": {
+      "title": "Reverso",
+      "description": "La última persona que te penalizó ahora recibe el golpe.",
+      "shortRule": "Revierte la penalización",
+      "rules": "Selecciona **quién fue la última persona que te penalizó** durante el juego.\n\nEsa persona recibe **1 penalización** ahora.\n\nSi nadie te ha penalizado todavía, la carta no tiene efecto: pasa el turno."
+    },
+    "never_have_i": {
+      "title": "Yo Nunca",
+      "description": "El jugador hace una afirmación que empieza con 'Yo nunca...'. Quien ya lo haya hecho, pierde.",
+      "shortRule": "Quien ya lo hizo, pierde",
+      "rules": "El que sacó la carta hace una afirmación: **\"Yo nunca [algo]\"**.\n\nTodos los que **ya lo hayan hecho** reciben **1 penalización**.\n\n**Ejemplo:** *\"Yo nunca he viajado al extranjero\"* — quienes ya hayan viajado, pierden.\n\nMarca quién perdió en la lista de abajo."
+    },
+    "putinha": {
+      "title": "Juego del Compañero",
+      "description": "Elige a un jugador. Cada vez que tú recibas una penalización, esa persona también recibe una (hasta 3 veces).",
+      "shortRule": "El jugador vinculado pierde contigo",
+      "rules": "El que sacó la carta elige a **1 jugador** para vincularlo a sí mismo.\n\nLas próximas **3 veces** que el portador reciba una penalización, el jugador vinculado también la recibirá automáticamente.\n\n- El vínculo aparece en la **barra de reglas activas** en la parte superior\n- Desaparece automáticamente después de 3 penalizaciones\n- El vinculado no puede negarse"
+    },
+    "pi_game": {
+      "title": "Juego del Pi",
+      "description": "Cuenten alrededor de la mesa. Di 'Pi' en lugar de múltiplos de 3 o números que contengan el dígito 3 (ej: 13, 30, 33). Quien se equivoque, pierde.",
+      "shortRule": "Múltiplo de 3 o contiene 3 = Pi",
+      "rules": "Cuenten en voz alta alrededor de la mesa en sentido **horario**, empezando por el que sacó la carta.\n\n**Regla:** cada vez que el número sea **múltiplo de 3** (3, 6, 9...) **o contenga el dígito 3** (13, 23, 30, 31, 32, 33...), di **\"Pi\"** en lugar del número.\n\n- Quien diga el número incorrecto **pierde**\n- Quien olvide decir Pi **pierde**\n- La ronda continúa hasta que alguien se equivoque"
+    },
+    "cs_compound": {
+      "title": "CS Compuesto",
+      "description": "Prohibido decir palabras que empiecen con C o S, y palabras compuestas. Quien se equivoque, pierde.",
+      "shortRule": "Sin C, S o compuestas",
+      "rules": "El que sacó la carta decide un tema y dice una palabra. En sentido horario todos deben decir una palabra dentro del tema elegido, pero con restricciones:\n\n**Prohibido:**\n- Palabras que empiecen con **C** o **S**\n- Palabras **compuestas** uniendo dos palabras en una sola (ej: *abrelatas*, *cumpleaños*, *paraguas*, *lavavajillas*)\n\nQuien diga una palabra prohibida **pierde**."
+    },
+    "frog_game": {
+      "title": "Juego de la Rana",
+      "description": "En sentido horario, cada uno dice una palabra de la secuencia: Una → Rana → Cayó → En → La → Laguna → Ploft. La cuenta crece cada ronda. Quien se equivoque, pierde.",
+      "shortRule": "Una rana cayó en la laguna, ¡ploft!",
+      "rules": "En sentido **horario** a partir del que sacó la carta, cada jugador dice **una palabra** de la secuencia:\n\n**Una → Rana → Cayó → En → La → Laguna → Ploft**\n\nDespués del \"Ploft\", empieza el número **Dos**, pero ahora cada palabra se repite dos veces:\n\n*Dos → Dos → Rana → Rana → Cayó → Cayó → En → En → La → La → Laguna → Laguna → Ploft → Ploft*\n\nCon cada nueva ronda la repetición aumenta. El juego no se detiene entre rondas.\n\nQuien **dude** o diga la palabra **incorrecta**, pierde."
+    },
+    "pim_pow_pam": {
+      "title": "Pim Pow Pam",
+      "description": "Jueguen Pim Pow Pam alrededor de la mesa. Quien se equivoque en la secuencia o la dirección, pierde.",
+      "shortRule": "¡Pim y Pow siguen la ronda; en el Pam, señala al siguiente!",
+      "rules": "El que sacó la carta empieza diciendo **\"Pim\"**. El siguiente jugador en sentido horario dice **\"Pow\"**. El tercer jugador debe decir **\"Pam\"** y, obligatoriamente, **señalar a cualquier persona** de la mesa. El juego se reinicia inmediatamente con la persona señalada diciendo **\"Pim\"**, y la secuencia continúa a partir de ella.\n\n**Pierde quien:**\n- Diga la palabra incorrecta en la secuencia\n- Tarde demasiado en responder\n- Olvide señalar en el \"Pam\"\n- Diga \"Pim\" fuera de tiempo (sin haber sido señalado en el turno anterior)"
+    },
+    "salute": {
+      "title": "Saludo Militar",
+      "description": "¡Atento a los gestos! El último en hacer el saludo militar discretamente, pierde.",
+      "shortRule": "El último en imitar el saludo pierde",
+      "rules": "El que sacó la carta debe, en **cualquier momento** del juego y de la forma más **discreta posible**, ponerse la mano en la frente en señal de saludo militar (🫡).\n\nA partir del momento en que lo noten, todos los demás jugadores deben imitar el gesto lo más rápido posible.\n\nEl **último** en darse cuenta y hacer el gesto, **pierde**."
+    },
+    "jokenpo": {
+      "title": "Cachipún",
+      "description": "Desafía a alguien a un duelo de Piedra, Papel o Tijera. Al mejor de 3. Quien pierda, recibe la penalización.",
+      "shortRule": "Al mejor de 3 gana",
+      "rules": "El que sacó la carta elige a **1 oponente**.\n\nJueguen **Piedra, Papel o Tijera**, al mejor de 3 rondas.\n\nQuien obtenga **menos victorias, recibe la penalización**.\n\nEn caso de empate tras 3 rondas, jueguen una ronda extra hasta desempatar."
+    },
+    "eye_to_eye": {
+      "title": "Ojo a Ojo",
+      "description": "Todos miran hacia abajo. Cuenta de 3-2-1 y todos miran a alguien. Las dos personas que se crucen la mirada, pierden.",
+      "shortRule": "Quien cruce la mirada, pierde",
+      "rules": "Todos los jugadores **miran hacia abajo**. La app hace una cuenta atrás **3-2-1**.\n\nAl escuchar *\"¡Miren hacia arriba!\"*, todos deben mirar directamente a otra persona **al mismo tiempo**.\n\n- Quienes se crucen la mirada con alguien **pierden** (ambos)\n- El que sacó la carta selecciona en la lista **qué jugadores** se cruzaron la mirada"
+    },
+    "add_rule": {
+      "title": "Pón Regla",
+      "description": "Crea una regla que valdrá para el resto del juego. Quien la rompa, pierde.",
+      "shortRule": "Una nueva regla entra en vigor",
+      "rules": "El que sacó la carta inventa **cualquier regla** que valdrá para el resto del juego.\n\n**Ejemplos:**\n- *\"Prohibido decir malas palabras\"*\n- *\"Todos usan la mano izquierda\"*\n- *\"El que se ría, pierde\"*\n- *\"Prohibido decir el nombre de alguien\"*\n\nLa regla se queda visible en la **barra superior** de la pantalla. Quien la rompa, **pierde**."
+    },
+    "remove_rule": {
+      "title": "Quita Regla",
+      "description": "Elimina una regla activa del juego.",
+      "shortRule": "Elimina una regla",
+      "rules": "Elimina **una de las reglas activas** del juego.\n\nLas reglas activas aparecen en la **barra superior** de la pantalla. Al eliminarla, la regla deja de valer inmediatamente.\n\nSi no hay reglas activas, la carta no tiene efecto."
+    },
+    "shield": {
+      "title": "Escudo",
+      "description": "¡Has ganado un escudo! La próxima vez que te toque recibir una penalización, el escudo la bloqueará.",
+      "shortRule": "+1 escudo",
+      "rules": "Has ganado un **escudo**.\n\nSe guarda en tu inventario y se usa **automáticamente** la próxima vez que te toque recibir una penalización: se bloquea y el escudo desaparece.\n\n- Uso **único**\n- Solo puedes tener **1 escudo** activo a la vez\n- El escudo bloquea cualquier tipo de penalización"
+    },
+    "bathroom": {
+      "title": "Pase de Baño",
+      "description": "Ganaste una ida gratis al baño. Úsala cuando quieras sin recibir penalización.",
+      "shortRule": "+1 baño libre",
+      "rules": "Ganaste una **ida gratis al baño**.\n\nCuando necesites salir durante el juego, usa el pase y ve sin recibir una penalización.\n\n- Uso **único** e intransferible\n- Se puede usar en cualquier momento\n- Sin el pase, salir sin penalización está prohibido"
+    },
+    "hot_potato": {
+      "title": "Patata Caliente",
+      "description": "¡Pasa la 'patata' rápido! Cuando se acabe el tiempo, quien la tenga en la mano, pierde.",
+      "shortRule": "¡No te quedes con la patata!",
+      "rules": "Toca en **\"Comenzar temporizador\"** para iniciar.\n\nPasa un objeto rápidamente a cualquier persona.\n\nCuando el temporizador termine y el sonido **explote**, quien tenga la patata **pierde**.\n\nSelecciona al desafortunado en la lista."
+    },
+    "duck_game": {
+      "title": "Pato ¿Qué?",
+      "description": "En sentido horario, di 'pato' para pasar al siguiente. '¿Qué?' invierte el sentido. 'Quack' salta a la siguiente persona. Quien se equivoque, pierde.",
+      "shortRule": "Pato, ¿qué?, ¡quack!",
+      "rules": "En sentido **horario** a partir del que sacó la carta, cada jugador usa una de las tres palabras:\n\n- **\"Pato\"** → pasa el turno al siguiente jugador\n- **\"¿Qué?\"** → invierte el sentido de la ronda\n- **\"Quack\"** → salta al siguiente jugador\n\nQuien **dude**, diga la palabra **incorrecta** o actúe **fuera de orden**, pierde."
+    }
+  }
+}

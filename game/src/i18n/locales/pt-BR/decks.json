@@ -1,0 +1,136 @@
+{
+  "cards": {
+    "point_1": {
+      "title": "Aponta pra alguém",
+      "description": "Escolha uma pessoa para levar uma penalidade.",
+      "shortRule": "1 pessoa leva",
+      "rules": "Selecione **1 jogador** na lista abaixo e confirme.\n\nEssa pessoa leva **1 penalidade**. Sem discussão — quem você apontou, perde."
+    },
+    "point_2": {
+      "title": "Aponta pra dois",
+      "description": "Escolha duas pessoas para levar uma penalidade.",
+      "shortRule": "2 pessoas levam",
+      "rules": "Selecione **2 jogadores** na lista abaixo e confirme.\n\nOs dois levam **1 penalidade cada**. Você pode apontar para quem quiser."
+    },
+    "point_3": {
+      "title": "Aponta pra três",
+      "description": "Escolha três pessoas para levar uma penalidade.",
+      "shortRule": "3 pessoas levam",
+      "rules": "Selecione **3 jogadores** na lista abaixo e confirme.\n\nOs três levam **1 penalidade cada**. Você pode apontar para quem quiser."
+    },
+    "all_men": {
+      "title": "Todos os homens",
+      "description": "Todos os homens na mesa levam uma penalidade.",
+      "shortRule": "Homens levam",
+      "rules": "Todos os **homens** presentes na partida levam **1 penalidade**.\n\nSelecione todos eles na lista para registrar no placar."
+    },
+    "all_women": {
+      "title": "Todas as mulheres",
+      "description": "Todas as mulheres na mesa levam uma penalidade.",
+      "shortRule": "Mulheres levam",
+      "rules": "Todas as **mulheres** presentes na partida levam **1 penalidade**.\n\nSelecione todas elas na lista para registrar no placar."
+    },
+    "everyone": {
+      "title": "Todos perdem",
+      "description": "Todo mundo na mesa leva uma penalidade.",
+      "shortRule": "Todos levam",
+      "rules": "**Todo mundo** na mesa leva **1 penalidade**.\n\nSelecione todos os jogadores na lista para registrar no placar."
+    },
+    "reverso": {
+      "title": "Reverso",
+      "description": "A última pessoa que te penalizou agora leva o troco.",
+      "shortRule": "Reverte a penalidade",
+      "rules": "Selecione **quem foi a última pessoa que te penalizou** durante o jogo.\n\nEssa pessoa leva **1 penalidade** agora.\n\nSe ninguém te penalizou ainda, a carta não tem efeito — passe a vez."
+    },
+    "never_have_i": {
+      "title": "Eu Nunca",
+      "description": "O jogador faz uma afirmação começando com 'Eu nunca...'. Quem já fez leva uma penalidade.",
+      "shortRule": "Quem já fez leva",
+      "rules": "O tirador da carta faz uma afirmação: **\"Eu nunca [algo]\"**.\n\nTodos os que **já fizeram** aquilo levam **1 penalidade**.\n\n**Exemplo:** *\"Eu nunca fui ao exterior\"* — quem já viajou leva.\n\nMarque quem levou na lista abaixo."
+    },
+    "putinha": {
+      "title": "Putinha",
+      "description": "Escolha um jogador. Toda vez que você levar uma penalidade, essa pessoa também leva (até 3 vezes).",
+      "shortRule": "Jogador vinculado leva junto",
+      "rules": "O tirador da carta escolhe **1 jogador** para vincular a si.\n\nNas próximas **3 vezes** que o tirador levar uma penalidade, o jogador vinculado leva junto automaticamente.\n\n- O vínculo aparece na **barra de regras ativas** no topo\n- Some automaticamente após 3 penalidades\n- O vinculado não pode recusar"
+    },
+    "pi_game": {
+      "title": "Jogo do Pi",
+      "description": "Contem ao redor da mesa. Diga 'Pi' em vez de múltiplos de 3 ou números que contêm o dígito 3 (ex: 13, 30, 33). Quem errar perde.",
+      "shortRule": "Múltiplo de 3 ou contém 3 = Pi",
+      "rules": "Contem em voz alta ao redor da mesa em sentido **horário**, começando pelo tirador.\n\n**Regra:** toda vez que o número for **múltiplo de 3** (3, 6, 9...) **ou contiver o dígito 3** (13, 23, 30, 31, 32, 33...), diga **\"Pi\"** em vez do número.\n\n- Quem falar o número errado **perde**\n- Quem esquecer de dizer Pi **perde**\n- A rodada continua até alguém errar"
+    },
+    "cs_compound": {
+      "title": "CS Composto",
+      "description": "Proibido falar palavras que começam com C ou S, e palavras compostas. Quem errar perde.",
+      "shortRule": "Sem C, S ou compostas",
+      "rules": "Quem tirou a carta decide um tema e fala uma palavra. Em sentido horário todos devem falar uma palavra dentro do tema escolhido — mas com restrições:\n\n**Proibido:**\n- Palavras que começam com **C** ou **S**\n- Palavras **compostas** (ex: guarda-chuva, beija-flor, pé-de-moleque)\n\nQuem falar uma palavra proibida **perde**."
+    },
+    "frog_game": {
+      "title": "Jogo do Sapo",
+      "description": "Em sentido horário, cada um diz uma palavra da sequência: Um → Sapo → Caiu → Na → Lagoa → Ploft. A contagem cresce a cada rodada. Quem errar perde.",
+      "shortRule": "Um sapo caiu na lagoa, ploft!",
+      "rules": "Em sentido **horário** a partir do tirador, cada jogador diz **uma palavra** da sequência:\n\n**Um → Sapo → Caiu → Na → Lagoa → Ploft**\n\nApós o \"Ploft\", começa o número **Dois** — mas agora cada palavra se repete duas vezes:\n\n*Dois → Dois → Sapo → Sapo → Caiu → Caiu → Na → Na → Lagoa → Lagoa → Ploft → Ploft*\n\nA cada nova rodada a repetição aumenta. O jogo não para entre rodadas.\n\nQuem **hesitar** ou falar a palavra **errada** perde."
+    },
+    "pim_pow_pam": {
+      "title": "Pim Pow Pam",
+      "description": "Joguem Pim Pow Pam ao redor da mesa. Quem errar a sequência ou a direção perde.",
+      "shortRule": "Pim e Pow seguem a roda; no Pam, aponte para o próximo!",
+      "rules": "Quem tirou a carta começa dizendo **\"Pim\"**. O jogador seguinte no sentido horário diz **\"Pow\"**. O terceiro jogador deve dizer **\"Pam\"** e, obrigatoriamente, **apontar para qualquer pessoa** da roda. O jogo recomeça imediatamente com a pessoa que foi apontada dizendo **\"Pim\"**, e a sequência continua a partir dela.\n\n**Perde quem:**\n- Falar a palavra errada na sequência\n- Demorar demais para responder\n- Esquecer de apontar no \"Pam\"\n- Falar \"Pim\" fora de hora (sem ter sido apontado no turno anterior)"
+    },
+    "salute": {
+      "title": "Continência",
+      "description": "Fique atento aos gestos! O último a fazer continência discretamente perde.",
+      "shortRule": "O último a imitar a continência perde",
+      "rules": "Quem tirou a carta deve, em **qualquer momento** do jogo e da forma mais **discreta possível**, colocar a mão na testa em sinal de continência (🫡).\n\nA partir do momento que notarem, todos os outros jogadores devem imitar o gesto o mais rápido possível.\n\nO **último** a perceber e fazer o gesto **perde**."
+    },
+    "jokenpo": {
+      "title": "Jokenpô",
+      "description": "Desafie alguém para um duelo de Pedra-Papel-Tesoura. Melhor de 3. Quem perder leva a penalidade.",
+      "shortRule": "Melhor de 3 vence",
+      "rules": "O tirador escolhe **1 adversário**.\n\nJoguem **Pedra-Papel-Tesoura**, melhor de 3 rodadas.\n\nQuem obtiver **menos vitórias leva a penalidade**.\n\nEm caso de empate após 3 rodadas, joguem uma rodada extra até desempatar."
+    },
+    "eye_to_eye": {
+      "title": "Olho no Olho",
+      "description": "Todos olham para baixo. Contagem 3-2-1 e todos olham para alguém. As duas pessoas que cruzarem o olhar levam uma penalidade.",
+      "shortRule": "Quem cruzar olhar perde",
+      "rules": "Todos os jogadores **olham para baixo**. O app faz uma contagem **3-2-1**.\n\nNo *\"Olhem para cima!\"*, todos devem olhar diretamente para outra pessoa **ao mesmo tempo**.\n\n- Quem cruzar o olhar com alguém **perde** — os dois\n- O tirador seleciona na lista **quais jogadores** se encararam"
+    },
+    "add_rule": {
+      "title": "Põe Regra",
+      "description": "Crie uma regra que valerá pelo resto do jogo. Quem quebrar a regra perde.",
+      "shortRule": "Nova regra entra em vigor",
+      "rules": "O tirador inventa **qualquer regra** que valerá pelo resto do jogo.\n\n**Exemplos:**\n- *\"Proibido falar palavrão\"*\n- *\"Todos usam a mão esquerda\"*\n- *\"Quem rir perde\"*\n- *\"Proibido dizer o nome de alguém\"*\n\nA regra fica visível na **barra no topo** da tela. Quem quebrar **perde**."
+    },
+    "remove_rule": {
+      "title": "Tira Regra",
+      "description": "Remova uma regra ativa do jogo.",
+      "shortRule": "Remove uma regra",
+      "rules": "Remove **uma das regras ativas** do jogo.\n\nAs regras ativas aparecem na **barra no topo** da tela. Após remover, a regra deixa de valer imediatamente.\n\nSe não houver regras ativas, a carta não tem efeito."
+    },
+    "shield": {
+      "title": "Escudo",
+      "description": "Você ganhou um escudo! Na próxima vez que for levar uma penalidade, o escudo bloqueia.",
+      "shortRule": "+1 escudo",
+      "rules": "Você ganhou um **escudo**.\n\nEle fica no seu inventário e é usado **automaticamente** na próxima vez que você for levar uma penalidade — ela é bloqueada e o escudo some.\n\n- Uso **único**\n- Você só pode ter **1 escudo** ativo por vez\n- O escudo bloqueia qualquer tipo de penalidade"
+    },
+    "bathroom": {
+      "title": "Banheiro",
+      "description": "Você ganhou uma ida grátis ao banheiro. Use quando quiser sem levar penalidade.",
+      "shortRule": "+1 banheiro livre",
+      "rules": "Você ganhou uma **ida grátis ao banheiro**.\n\nQuando precisar sair durante o jogo, use o passe e vá sem precisar levar uma penalidade.\n\n- Uso **único** e intransferível\n- Pode ser usado a qualquer momento\n- Sem o passe, sair sem penalidade é proibido"
+    },
+    "hot_potato": {
+      "title": "Batata Quente",
+      "description": "Passe a 'batata' rapidamente! Quando o tempo acabar, quem estiver segurando perde.",
+      "shortRule": "Não fique com a batata!",
+      "rules": "Toque em **\"Começar o timer\"** para iniciar.\n\nPasse um objeto rapidamente para qualquer pessoa. \n\nQuando o timer acabar e o som **explodir**, quem estiver com a batata **perde**.\n\nSelecione o azarado na lista."
+    },
+    "duck_game": {
+      "title": "Pato Quê",
+      "description": "Em sentido horário, diga 'pato' para passar ao próximo. 'Que?' inverte o sentido. 'Quack' pula a próxima pessoa. Quem errar perde.",
+      "shortRule": "Pato, que?, quack!",
+      "rules": "Em sentido **horário** a partir do tirador, cada jogador usa uma das três palavras:\n\n- **\"Pato\"** → passa a vez para o próximo jogador\n- **\"Que?\"** → inverte o sentido da rodada\n- **\"Quack\"** → pula o próximo jogador\n\nQuem **hesitar**, falar a palavra **errada** ou agir **fora de ordem** perde."
+    }
+  }
+}

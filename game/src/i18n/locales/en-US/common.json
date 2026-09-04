@@ -1,0 +1,150 @@
+{
+  "setup": {
+    "title": "Party It",
+    "subtitle": "Set up your game",
+    "startGame": "Start Game",
+    "addPlayer": "Add Player",
+    "playerNamePlaceholder": "Player name",
+    "minPlayers": "Add at least 2 players",
+    "language": "Language",
+    "customCards": {
+      "title": "My Cards",
+      "empty": "No custom cards yet",
+      "add": "New card",
+      "cardTitle": "Card title",
+      "cardBody": "Description (optional)",
+      "delete": "Remove"
+    },
+    "minigames": {
+      "sectionTitle": "Game Settings",
+      "SEQUENTIAL_GAME": "Sequential Games",
+      "SHOWDOWN": "Duels",
+      "HOT_POTATO": "Hot Potato",
+      "REVERSO": "Reverso",
+      "GROUP_DYNAMIC": "Group Games",
+      "MODIFIER": "Rule Cards",
+      "BENEFIT": "Benefits",
+      "disabledCount": "{{count}} disabled",
+      "disabledCount_plural": "{{count}} disabled",
+      "hint": "Disabled card types won't appear in the deck."
+    }
+  },
+  "game": {
+    "drawCard": "Draw Card",
+    "turnOf": "Turn of",
+    "endGame": "End Game",
+    "drinkCount": "{{count}} point",
+    "drinkCount_plural": "{{count}} points",
+    "activeModifiers": "Active Rule",
+    "noCards": "No more cards!",
+    "recentCards": "Recent cards",
+    "helpTitle": "How to Play"
+  },
+  "results": {
+    "title": "Results",
+    "subtitle": "Game over",
+    "shareReport": "Share Report",
+    "shareRanking": "Share Ranking",
+    "exportPdf": "Export PDF",
+    "playAgain": "Play Again",
+    "home": "Home",
+    "totalDrinks": "Total points",
+    "mostDrawnCard": "Most drawn card",
+    "duration": "Duration",
+    "ranking": "Leaderboard",
+    "rankingCard": {
+      "totalDrinks": "TOTAL POINTS",
+      "mostPlayed": "MOST PLAYED",
+      "top": "TOP {{count}}",
+      "drankLeast": "FEWEST POINTS",
+      "barman": "TOP SCORER",
+      "durationHour": "{{h}}h {{m}}min",
+      "durationMin": "{{m}}min"
+    },
+    "shareSheet": {
+      "title": "Share leaderboard",
+      "dialogTitle": "Party It Leaderboard",
+      "instagram": "Instagram Stories",
+      "savePhoto": "Save photo",
+      "share": "Share",
+      "saved": "Photo saved!",
+      "permissionDenied": "Please allow gallery access in device settings to save the photo.",
+      "permissionDeniedTitle": "Access denied"
+    }
+  },
+  "history": {
+    "title": "History",
+    "empty": "No games recorded",
+    "clearHistory": "Clear History",
+    "confirmClear": "Are you sure? This action cannot be undone.",
+    "players": "{{count}} player",
+    "players_plural": "{{count}} players",
+    "drinks": "{{count}} point",
+    "drinks_plural": "{{count}} points",
+    "cards": "{{count}} card",
+    "cards_plural": "{{count}} cards",
+    "durationFormat": "{{min}}m {{sec}}s"
+  },
+  "card": {
+    "drink": "Penalize",
+    "pass": "Pass",
+    "done": "Done",
+    "skip": "Skip",
+    "loser": "Loser!",
+    "blocked": "Shield activated!",
+    "selectPlayer": "Select player",
+    "selectTarget": "Choose who gets penalized",
+    "whoDrank": "Who lost?",
+    "drawer": "Card drawer",
+    "linkPlayer": "Link player",
+    "lookDown": "Everyone look down",
+    "lookUp": "Look up!",
+    "start": "Start",
+    "howToPlay": "How to play?",
+    "linked": "Linked",
+    "putinhaConfirmed": "{{drawer}}'s buddy is: {{linked}}",
+    "selectOpponent": "Choose an opponent",
+    "startDuel": "Start duel",
+    "rpsInstruction": "Play! Best of 3.",
+    "ruleDescriptionPlaceholder": "Describe the rule...",
+    "categoryAction": "Action",
+    "categoryGroup": "Group",
+    "categoryGame": "Game",
+    "categoryReflex": "Reflex",
+    "categoryShowdown": "Duel",
+    "categoryModifier": "Rule",
+    "categoryBenefit": "Bonus",
+    "startTimer": "Start timer",
+    "potatoRunning": "The potato is ticking...",
+    "exploded": "EXPLODED!",
+    "whoHadPotato": "Who had the potato?",
+    "reversoTarget": "Who penalized you last time:",
+    "reversoSelf": "No one has penalized you yet. Take the first penalty to start!"
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "next": "Next",
+    "start": "Start"
+  },
+  "errors": {
+    "nameRequired": "Name is required",
+    "nameTooLong": "Name too long (max 20 characters)",
+    "minPlayers": "Add at least 2 players"
+  },
+  "common": {
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "remove": "Remove",
+    "close": "Close"
+  },
+  "player": {
+    "shield": "Shield",
+    "bathroom": "WC",
+    "useBathroom": "Use bathroom pass",
+    "salute": "Salute",
+    "useSalute": "Use Salute"
+  }
+}

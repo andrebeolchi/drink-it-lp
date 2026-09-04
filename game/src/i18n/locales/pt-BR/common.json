@@ -1,0 +1,150 @@
+{
+  "setup": {
+    "title": "Sueca",
+    "subtitle": "Configure sua partida",
+    "startGame": "Começar Jogo",
+    "addPlayer": "Adicionar Jogador",
+    "playerNamePlaceholder": "Nome do jogador",
+    "minPlayers": "Adicione pelo menos 2 jogadores",
+    "language": "Idioma",
+    "customCards": {
+      "title": "Suas Cartas",
+      "empty": "Nenhuma carta criada ainda",
+      "add": "Nova carta",
+      "cardTitle": "Título da carta",
+      "cardBody": "Descrição (opcional)",
+      "delete": "Remover"
+    },
+    "minigames": {
+      "sectionTitle": "Ajustes do Jogo",
+      "SEQUENTIAL_GAME": "Jogos Sequenciais",
+      "SHOWDOWN": "Duelos",
+      "HOT_POTATO": "Batata Quente",
+      "REVERSO": "Reverso",
+      "GROUP_DYNAMIC": "Dinâmicas de Grupo",
+      "MODIFIER": "Regras",
+      "BENEFIT": "Benefícios",
+      "disabledCount": "{{count}} desativado",
+      "disabledCount_plural": "{{count}} desativados",
+      "hint": "Cartas do tipo desativado não aparecem no baralho."
+    }
+  },
+  "game": {
+    "drawCard": "Puxar Carta",
+    "turnOf": "Vez de",
+    "endGame": "Encerrar Jogo",
+    "drinkCount": "{{count}} ponto",
+    "drinkCount_plural": "{{count}} pontos",
+    "activeModifiers": "Regra ativa",
+    "noCards": "Sem mais cartas!",
+    "recentCards": "Últimas cartas",
+    "helpTitle": "Como Jogar"
+  },
+  "results": {
+    "title": "Resultado",
+    "subtitle": "Partida encerrada",
+    "shareReport": "Compartilhar Relatório",
+    "shareRanking": "Compartilhar Ranking",
+    "exportPdf": "Exportar PDF",
+    "playAgain": "Jogar Novamente",
+    "home": "Início",
+    "totalDrinks": "Total de pontos",
+    "mostDrawnCard": "Carta mais sorteada",
+    "duration": "Duração",
+    "ranking": "Placar",
+    "rankingCard": {
+      "totalDrinks": "PONTOS TOTAIS",
+      "mostPlayed": "MAIS JOGADO",
+      "top": "TOP {{count}}",
+      "drankLeast": "MENOS PONTOS",
+      "barman": "MVP",
+      "durationHour": "{{h}}h {{m}}min",
+      "durationMin": "{{m}}min"
+    },
+    "shareSheet": {
+      "title": "Compartilhar ranking",
+      "dialogTitle": "Ranking Sueca",
+      "instagram": "Stories do Instagram",
+      "savePhoto": "Salvar foto",
+      "share": "Compartilhar",
+      "saved": "Foto salva!",
+      "permissionDenied": "Permita o acesso à galeria nas configurações do dispositivo para salvar a foto.",
+      "permissionDeniedTitle": "Acesso negado"
+    }
+  },
+  "history": {
+    "title": "Histórico",
+    "empty": "Nenhuma partida registrada",
+    "clearHistory": "Limpar Histórico",
+    "confirmClear": "Tem certeza? Esta ação não pode ser desfeita.",
+    "players": "{{count}} jogador",
+    "players_plural": "{{count}} jogadores",
+    "drinks": "{{count}} ponto",
+    "drinks_plural": "{{count}} pontos",
+    "cards": "{{count}} carta",
+    "cards_plural": "{{count}} cartas",
+    "durationFormat": "{{min}}m {{sec}}s"
+  },
+  "card": {
+    "drink": "Penalizar",
+    "pass": "Passar",
+    "done": "Feito",
+    "skip": "Pular",
+    "loser": "Perdeu!",
+    "blocked": "Escudo ativado!",
+    "selectPlayer": "Selecionar jogador",
+    "selectTarget": "Escolha quem vai levar",
+    "whoDrank": "Quem perdeu?",
+    "drawer": "Quem tirou a carta",
+    "linkPlayer": "Vincular jogador",
+    "lookDown": "Todos olhem para baixo",
+    "lookUp": "Olhem para cima!",
+    "start": "Iniciar",
+    "howToPlay": "Como jogar?",
+    "linked": "Vinculado",
+    "putinhaConfirmed": "A putinha do {{drawer}} é: {{linked}}",
+    "selectOpponent": "Escolha um adversário",
+    "startDuel": "Iniciar duelo",
+    "rpsInstruction": "Joguem! Melhor de 3.",
+    "ruleDescriptionPlaceholder": "Descreva a regra...",
+    "categoryAction": "Ação",
+    "categoryGroup": "Grupo",
+    "categoryGame": "Jogo",
+    "categoryReflex": "Reflexo",
+    "categoryShowdown": "Duelo",
+    "categoryModifier": "Regra",
+    "categoryBenefit": "Bônus",
+    "startTimer": "Começar o timer",
+    "potatoRunning": "A batata está passando...",
+    "exploded": "EXPLODIU!",
+    "whoHadPotato": "Quem estava com a batata?",
+    "reversoTarget": "Quem te penalizou da última vez:",
+    "reversoSelf": "Ninguém te penalizou ainda. Você leva o primeiro pra começar!"
+  },
+  "onboarding": {
+    "skip": "Pular",
+    "next": "Próximo",
+    "start": "Começar"
+  },
+  "errors": {
+    "nameRequired": "Nome é obrigatório",
+    "nameTooLong": "Nome muito longo (máx. 20 caracteres)",
+    "minPlayers": "Adicione pelo menos 2 jogadores"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "yes": "Sim",
+    "no": "Não",
+    "remove": "Remover",
+    "close": "Fechar"
+  },
+  "player": {
+    "shield": "Escudo",
+    "bathroom": "WC",
+    "useBathroom": "Usar passe de banheiro",
+    "salute": "Continência",
+    "useSalute": "Usar Continência"
+  }
+}
