@@ -6,6 +6,7 @@
     "addPlayer": "Añadir Jugador",
     "playerNamePlaceholder": "Nombre del jugador",
     "minPlayers": "Añade al menos 2 jugadores",
+    "noCardsAvailable": "Desactivaste todos los tipos de carta. Activa al menos uno en Ajustes del Juego para empezar.",
     "language": "Idioma",
     "customCards": {
       "title": "Mis Cartas",

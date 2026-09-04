@@ -86,6 +86,7 @@ export const useGameStore = create<GameState>()(
       drawCard: () => {
         const { currentCardIndex, discardPile } = get()
         let deck = get().deck
+        if (deck.length === 0) return null
         let nextIndex = currentCardIndex + 1
         if (nextIndex >= deck.length) {
           deck = shuffleDeck(deck)

@@ -33,7 +33,9 @@ export function Results() {
   }, {})
   const mostPlayedId = Object.entries(cardCounts).sort((a, b) => b[1] - a[1])[0]?.[0]
   const mostPlayedCard = mostPlayedId ? gamingCards.find((c) => c.id === mostPlayedId) : null
-  const mostPlayedCardTitle = mostPlayedCard ? t(`${mostPlayedCard.i18nKey}.title`) : undefined
+  const mostPlayedCardTitle = mostPlayedCard
+    ? (mostPlayedCard.customTitle ?? t(`${mostPlayedCard.i18nKey}.title`))
+    : undefined
   const mostPlayedCardCount = mostPlayedId ? cardCounts[mostPlayedId] : undefined
 
   const drinksCaused = players.reduce<Record<string, number>>((acc, p) => {

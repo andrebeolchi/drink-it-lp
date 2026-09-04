@@ -6,6 +6,7 @@
     "addPlayer": "Add Player",
     "playerNamePlaceholder": "Player name",
     "minPlayers": "Add at least 2 players",
+    "noCardsAvailable": "You disabled every card type. Enable at least one in Game Settings to start.",
     "language": "Language",
     "customCards": {
       "title": "My Cards",

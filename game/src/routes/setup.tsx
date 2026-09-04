@@ -10,6 +10,7 @@ import { useGameStore } from '@/core/store/game-store'
 import { useSettingsStore } from '@/core/store/settings-store'
 import type { Player } from '@/core/types/player'
 
+import { DECK } from '@/modules/deck/deck'
 import { createPlayer, getNextAvatarColor } from '@/modules/players/player-utils'
 
 import { Avatar } from '@/components/ui/avatar'
@@ -55,8 +56,10 @@ export function Setup() {
     setPlayers((prev) => prev.filter((p) => p.id !== id))
   }
 
+  const noCardsAvailable = disabledCardIds.length >= DECK.length && customCards.length === 0
+
   function onStartGame() {
-    if (players.length < 2) return
+    if (players.length < 2 || noCardsAvailable) return
     startGame({ players })
     navigate('/game', { replace: true })
   }
@@ -151,7 +154,8 @@ export function Setup() {
       </div>
 
       <div className="border-t border-border px-6 py-3">
-        <Button onClick={onStartGame} disabled={players.length < 2}>
+        {noCardsAvailable && <Text className="mb-2 text-center text-xs text-warning">{t('setup.noCardsAvailable')}</Text>}
+        <Button onClick={onStartGame} disabled={players.length < 2 || noCardsAvailable}>
           {t('setup.startGame')}
         </Button>
       </div>
