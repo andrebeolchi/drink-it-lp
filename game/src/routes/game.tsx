@@ -9,6 +9,7 @@ import type { DeckCard } from '@/core/types/card'
 import { DECK } from '@/modules/deck/deck'
 
 import { CardDispatcher } from '@/components/feature/card-dispatcher'
+import { ManagePlayersSheet } from '@/components/feature/manage-players-sheet'
 import { CARD_STRIPE_CLASSES } from '@/components/kit/theme'
 import { Avatar } from '@/components/ui/avatar'
 import { CategoryBadge } from '@/components/ui/badge'
@@ -42,6 +43,7 @@ export function Game() {
   const [carouselIndex, setCarouselIndex] = useState(0)
   const [debugVisible, setDebugVisible] = useState(false)
   const [debugCard, setDebugCard] = useState<DeckCard | null>(null)
+  const [managePlayersVisible, setManagePlayersVisible] = useState(false)
   const cardCountRef = useRef(0)
 
   const activePlayers = players.filter((p) => p.isActive)
@@ -98,6 +100,12 @@ export function Game() {
           {t('game.drawCard')}
         </Text>
         <div className="flex items-center gap-2">
+          <button
+            onClick={() => setManagePlayersVisible(true)}
+            className="rounded-full border border-border px-2.5 py-1"
+          >
+            <Text className="text-sm">👥</Text>
+          </button>
           {LANGUAGES.map(({ code, label }) => (
             <button
               key={code}
@@ -249,6 +257,8 @@ export function Game() {
           </div>
         )}
       </Modal>
+
+      <ManagePlayersSheet isVisible={managePlayersVisible} onClose={() => setManagePlayersVisible(false)} />
 
       <div className="border-t border-border px-5 py-4">
         <Button variant="danger" onClick={handleEndGame}>
