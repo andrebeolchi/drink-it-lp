@@ -128,9 +128,9 @@
     },
     "can_roulette": {
       "title": "Can Roulette",
-      "description": "One can, one mystery. Everyone presses it in turn — it can pop at any moment. Whoever is holding it when it does gets penalized.",
-      "shortRule": "Press the can and pray",
-      "rules": "Tap **\"Start the roulette\"** to prep the can.\n\nIn order, each player taps the on-screen button to press the can.\n\nIt can pop on any press — nobody knows when.\n\nWhoever is pressing when it **pops** gets penalized."
+      "description": "One can, one mystery. In order, everyone tries to open the can, which can pop at any moment. Whoever is trying when it does gets penalized.",
+      "shortRule": "Try to open the can and pray",
+      "rules": "Tap **\"Start the roulette\"** to prep the can.\n\nIn order, each player taps the on-screen button to try opening the can.\n\nIt can pop on any attempt, nobody knows when.\n\nWhoever is trying when it **pops** gets penalized."
     },
     "duck_game": {
       "title": "Duck What?",

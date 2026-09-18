@@ -128,9 +128,9 @@
     },
     "can_roulette": {
       "title": "Ruleta de la Latita",
-      "description": "Una latita, un misterio. Cada uno la aprieta en su turno — puede abrirse en cualquier momento. Quien la esté apretando cuando eso pase, bebe.",
-      "shortRule": "Aprieta la latita y reza",
-      "rules": "Toca en **\"Comenzar la ruleta\"** para preparar la latita.\n\nEn orden, cada jugador toca el botón en pantalla para apretar la latita.\n\nPuede abrirse en cualquier apretón — nadie sabe cuándo.\n\nQuien la esté apretando cuando **se abra**, bebe."
+      "description": "Una latita, un misterio. En orden, cada uno intenta abrir la latita, que puede abrirse en cualquier momento. Quien la esté intentando abrir cuando eso pase, bebe.",
+      "shortRule": "Intenta abrir la latita y reza",
+      "rules": "Toca en **\"Comenzar la ruleta\"** para preparar la latita.\n\nEn orden, cada jugador toca el botón en pantalla para intentar abrir la latita.\n\nPuede abrirse en cualquier intento, nadie sabe cuándo.\n\nQuien la esté intentando abrir cuando **se abra**, bebe."
     },
     "duck_game": {
       "title": "Pato ¿Qué?",

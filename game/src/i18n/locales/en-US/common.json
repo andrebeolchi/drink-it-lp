@@ -122,8 +122,8 @@
     "reversoTarget": "Who penalized you last time:",
     "reversoSelf": "No one has penalized you yet. Take the first penalty to start!",
     "canRouletteStart": "Start the roulette",
-    "canRouletteTurn": "Turn to press",
-    "canRoulettePress": "Press the can",
+    "canRouletteTurn": "Turn to try",
+    "canRoulettePress": "Try to open the can",
     "canRouletteSafe": "Phew! It didn't pop this time...",
     "canRouletteOpened": "THE CAN POPPED!",
     "canRouletteLoser": "{{name}} got soaked and has to drink!"
