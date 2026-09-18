@@ -10,7 +10,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '../jogar',
+    outDir: 'dist',
     emptyOutDir: true,
   },
 })

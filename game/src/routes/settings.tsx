@@ -1,3 +1,4 @@
+import { ChevronLeft } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
@@ -65,8 +66,9 @@ export function Settings() {
     <div className="flex flex-1 flex-col overflow-y-auto bg-background">
       <div className="flex flex-col gap-6 px-6 pb-6 pt-6">
         <div className="flex items-center gap-3">
-          <button onClick={() => navigate(-1)}>
-            <Text className="text-sm text-brand">← {t('common.cancel')}</Text>
+          <button onClick={() => navigate(-1)} className="flex items-center gap-0.5">
+            <ChevronLeft className="h-4 w-4 text-brand" />
+            <Text className="text-sm text-brand">{t('common.cancel')}</Text>
           </button>
           <Text as="h1" className="font-syne text-xl font-bold text-foreground">
             {t('setup.minigames.sectionTitle')}
