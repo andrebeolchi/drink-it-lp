@@ -7,9 +7,8 @@ import { getCanRouletteTrigger } from '@/core/engine/games/can-roulette'
 import { getCurrentPlayer, useGameStore } from '@/core/store/game-store'
 import { useSettingsStore } from '@/core/store/settings-store'
 
-// Silent placeholders — swap for the real sound effects once they land.
-import openSoundUrl from '@/components/assets/sounds/can-roulette-open.wav'
-import pressSoundUrl from '@/components/assets/sounds/can-roulette-press.wav'
+import openSoundUrl from '@/components/assets/sounds/can-roulette-open.mp3'
+import pressSoundUrl from '@/components/assets/sounds/can-roulette-press.mp3'
 import { CanIllustration } from '@/components/feature/can-illustration'
 import { CardBase } from '@/components/feature/card-base'
 import { Avatar } from '@/components/ui/avatar'
