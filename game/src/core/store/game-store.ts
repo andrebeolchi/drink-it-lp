@@ -41,6 +41,8 @@ interface GameState {
   removeModifier: (modifierId: string) => void
   removeExpiredModifiers: () => void
   linkPlayers: (params: LinkPlayersParams) => void
+  addPlayerMidGame: (player: Player) => void
+  removePlayerMidGame: (playerId: string) => void
   endGame: () => void
   resetGame: () => void
 }
@@ -189,6 +191,18 @@ export const useGameStore = create<GameState>()(
             }
             return p
           }),
+        }))
+      },
+
+      addPlayerMidGame: (player) => {
+        set((state) => ({ players: [...state.players, player] }))
+      },
+
+      removePlayerMidGame: (playerId) => {
+        const activeCount = get().players.filter((p) => p.isActive).length
+        if (activeCount <= 2) return
+        set((state) => ({
+          players: state.players.map((p) => (p.id === playerId ? { ...p, isActive: false } : p)),
         }))
       },
 

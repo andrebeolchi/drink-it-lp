@@ -4,7 +4,7 @@
       "title": "Point at Someone",
       "description": "Choose one person to take a penalty.",
       "shortRule": "1 person gets penalized",
-      "rules": "Select **1 player** from the list below and confirm.\n\nThat person takes **1 penalty**. No arguments — whoever you point at, loses."
+      "rules": "Select **1 player** from the list below and confirm.\n\nThat person takes **1 penalty**. No arguments: whoever you point at, loses."
     },
     "point_2": {
       "title": "Point at Two",
@@ -40,13 +40,13 @@
       "title": "Reverse",
       "description": "The last person who penalized you now takes the hit.",
       "shortRule": "Reverses the penalty",
-      "rules": "Select **who was the last person that penalized you** during the game.\n\nThat person takes **1 penalty** now.\n\nIf nobody penalized you yet, the card has no effect — pass your turn."
+      "rules": "Select **who was the last person that penalized you** during the game.\n\nThat person takes **1 penalty** now.\n\nIf nobody penalized you yet, the card has no effect. Pass your turn."
     },
     "never_have_i": {
       "title": "Never Have I Ever",
       "description": "The player makes a statement starting with 'Never have I ever...'. Anyone who has done it gets a penalty.",
       "shortRule": "Whoever has done it loses",
-      "rules": "The card drawer makes a statement: **\"Never have I ever [done something]\"**.\n\nEveryone who **has already done** that takes **1 penalty**.\n\n**Example:** *\"Never have I ever been abroad\"* — anyone who has traveled gets penalized.\n\nMark whoever lost on the list below."
+      "rules": "The card drawer makes a statement: **\"Never have I ever [done something]\"**.\n\nEveryone who **has already done** that takes **1 penalty**.\n\n**Example:** *\"Never have I ever been abroad\"*. Anyone who has traveled gets penalized.\n\nMark whoever lost on the list below."
     },
     "putinha": {
       "title": "Sidekick Game",
@@ -64,13 +64,13 @@
       "title": "No C, M, or Compound Words",
       "description": "Forbidden to say words starting with C or M, and compound words. Whoever messes up loses.",
       "shortRule": "No C, M, or compound words",
-      "rules": "The card drawer chooses a theme and says a starting word. Going clockwise, everyone must say a single word within that theme — but with strict restrictions:\n\n**Forbidden:**\n- Words starting with the letters **C** or **M** (Watch out for automatic answers like *Car*, *Coffee*, *Movie*, *Milk*...)\n- **Compound words** made by joining two words together into one (e.g., *Cupcake*, *Basketball*, *Raincoat*, *Sunscreen*)\n\nWhoever says a forbidden word, repeats a word, or takes too long **loses**."
+      "rules": "The card drawer chooses a theme and says a starting word. Going clockwise, everyone must say a single word within that theme, but with strict restrictions:\n\n**Forbidden:**\n- Words starting with the letters **C** or **M** (Watch out for automatic answers like *Car*, *Coffee*, *Movie*, *Milk*...)\n- **Compound words** made by joining two words together into one (e.g., *Cupcake*, *Basketball*, *Raincoat*, *Sunscreen*)\n\nWhoever says a forbidden word, repeats a word, or takes too long **loses**."
     },
     "frog_game": {
       "title": "The Frog Game",
       "description": "Going clockwise, everyone says one word from the sequence: One → Frog → Fell → Into → The → Pond → Splash. The count grows each round. Whoever messes up loses.",
       "shortRule": "One frog fell into the pond, splash!",
-      "rules": "Going **clockwise** starting from the drawer, each player says **one word** of the sequence:\n\n**One → Frog → Fell → Into → The → Pond → Splash**\n\nAfter \"Splash\", the number **Two** begins — but now each word repeats twice:\n\n*Two → Two → Frog → Frog → Fell → Fell → Into → Into → The → The → Pond → Pond → Splash → Splash*\n\nWith each new round, the repetition increases. The game doesn't stop between rounds.\n\nWhoever **hesitates** or says the **wrong** word loses."
+      "rules": "Going **clockwise** starting from the drawer, each player says **one word** of the sequence:\n\n**One → Frog → Fell → Into → The → Pond → Splash**\n\nAfter \"Splash\", the number **Two** begins, but now each word repeats twice:\n\n*Two → Two → Frog → Frog → Fell → Fell → Into → Into → The → The → Pond → Pond → Splash → Splash*\n\nWith each new round, the repetition increases. The game doesn't stop between rounds.\n\nWhoever **hesitates** or says the **wrong** word loses."
     },
     "pim_pow_pam": {
       "title": "Pim Pow Pam",
@@ -82,7 +82,7 @@
       "title": "Salute",
       "description": "Pay attention to gestures! The last one to salute discreetly loses.",
       "shortRule": "The last one to copy the salute loses",
-      "rules": "The card drawer must, at **any moment** of the game and as **discreetly as possible**, place their hand to their forehead in a salute gesture (🫡).\n\nAs soon as they notice, all other players must copy the gesture as fast as possible.\n\nThe **last** one to notice and do the gesture **loses**."
+      "rules": "The card drawer must, at **any moment** of the game and as **discreetly as possible**, place their hand to their forehead in a salute gesture.\n\nAs soon as they notice, all other players must copy the gesture as fast as possible.\n\nThe **last** one to notice and do the gesture **loses**."
     },
     "jokenpo": {
       "title": "Rock-Paper-Scissors",
@@ -94,7 +94,7 @@
       "title": "Eye to Eye",
       "description": "Everyone looks down. A 3-2-1 countdown plays, and everyone looks up at someone. The two people who lock eyes get penalized.",
       "shortRule": "Locking eyes means a penalty",
-      "rules": "All players **look down**. The app plays a **3-2-1** countdown.\n\nOn *\"Look up!\"*, everyone must look directly at another person **at the same time**.\n\n- Anyone who locks eyes with someone **gets penalized** — both of them\n- The drawer selects from the list **which players** stared at each other"
+      "rules": "All players **look down**. The app plays a **3-2-1** countdown.\n\nOn *\"Look up!\"*, everyone must look directly at another person **at the same time**.\n\n- Anyone who locks eyes with someone **gets penalized**: both of them\n- The drawer selects from the list **which players** stared at each other"
     },
     "add_rule": {
       "title": "Add a Rule",
@@ -112,7 +112,7 @@
       "title": "Shield",
       "description": "You won a shield! Next time you are supposed to be penalized, the shield blocks it.",
       "shortRule": "+1 shield",
-      "rules": "You won a **shield**.\n\nIt goes into your inventory and is used **automatically** the next time you have to take a penalty — it is blocked and the shield disappears.\n\n- **Single** use\n- You can only have **1 active shield** at a time\n- The shield blocks any type of penalty"
+      "rules": "You won a **shield**.\n\nIt goes into your inventory and is used **automatically** the next time you have to take a penalty: it is blocked and the shield disappears.\n\n- **Single** use\n- You can only have **1 active shield** at a time\n- The shield blocks any type of penalty"
     },
     "bathroom": {
       "title": "Bathroom Pass",

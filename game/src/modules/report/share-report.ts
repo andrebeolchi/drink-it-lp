@@ -17,7 +17,7 @@ export async function shareReport(stats: GameStats, gameDurationMs: number): Pro
   const file = new File([html], 'party-it-relatorio.html', { type: 'text/html' })
 
   if (navigator.canShare?.({ files: [file] })) {
-    await navigator.share({ files: [file], title: 'Party It — Relatório' })
+    await navigator.share({ files: [file], title: 'Party It: Relatório' })
     Analytics.reportShared({ format: 'html' })
     return
   }

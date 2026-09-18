@@ -46,7 +46,7 @@
       "title": "Yo Nunca",
       "description": "El jugador hace una afirmación que empieza con 'Yo nunca...'. Quien ya lo haya hecho, pierde.",
       "shortRule": "Quien ya lo hizo, pierde",
-      "rules": "El que sacó la carta hace una afirmación: **\"Yo nunca [algo]\"**.\n\nTodos los que **ya lo hayan hecho** reciben **1 penalización**.\n\n**Ejemplo:** *\"Yo nunca he viajado al extranjero\"* — quienes ya hayan viajado, pierden.\n\nMarca quién perdió en la lista de abajo."
+      "rules": "El que sacó la carta hace una afirmación: **\"Yo nunca [algo]\"**.\n\nTodos los que **ya lo hayan hecho** reciben **1 penalización**.\n\n**Ejemplo:** *\"Yo nunca he viajado al extranjero\"*. Quienes ya hayan viajado, pierden.\n\nMarca quién perdió en la lista de abajo."
     },
     "putinha": {
       "title": "Juego del Compañero",
@@ -82,7 +82,7 @@
       "title": "Saludo Militar",
       "description": "¡Atento a los gestos! El último en hacer el saludo militar discretamente, pierde.",
       "shortRule": "El último en imitar el saludo pierde",
-      "rules": "El que sacó la carta debe, en **cualquier momento** del juego y de la forma más **discreta posible**, ponerse la mano en la frente en señal de saludo militar (🫡).\n\nA partir del momento en que lo noten, todos los demás jugadores deben imitar el gesto lo más rápido posible.\n\nEl **último** en darse cuenta y hacer el gesto, **pierde**."
+      "rules": "El que sacó la carta debe, en **cualquier momento** del juego y de la forma más **discreta posible**, ponerse la mano en la frente en señal de saludo militar.\n\nA partir del momento en que lo noten, todos los demás jugadores deben imitar el gesto lo más rápido posible.\n\nEl **último** en darse cuenta y hacer el gesto, **pierde**."
     },
     "jokenpo": {
       "title": "Cachipún",

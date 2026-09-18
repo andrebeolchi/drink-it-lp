@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -93,7 +94,7 @@ function NeverHaveICard({ card, onComplete }: CardProps) {
                 {player.name}
               </Text>
               <PlayerInventoryIcons inventory={player.inventory} />
-              {isSelected && <Text className="text-sm font-bold text-brand">✓</Text>}
+              {isSelected && <Check className="h-4 w-4 text-brand" />}
             </button>
           )
         })}
@@ -158,7 +159,7 @@ function PutinhaCard({ card, onComplete }: CardProps) {
                     <Text truncate className="flex-1 text-left text-sm font-medium text-foreground">
                       {player.name}
                     </Text>
-                    {isSelected && <Text className="text-sm font-bold text-brand">✓</Text>}
+                    {isSelected && <Check className="h-4 w-4 text-brand" />}
                   </button>
                 )
               })}

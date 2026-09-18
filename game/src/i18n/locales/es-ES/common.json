@@ -39,7 +39,16 @@
     "activeModifiers": "Regla activa",
     "noCards": "¡No quedan más cartas!",
     "recentCards": "Últimas cartas",
-    "helpTitle": "Cómo Jugar"
+    "helpTitle": "Cómo Jugar",
+    "managePlayers": {
+      "button": "Jugadores",
+      "title": "Jugadores",
+      "removed": "Eliminado",
+      "remove": "Eliminar",
+      "minPlayersHint": "El juego necesita al menos 2 jugadores.",
+      "addPlaceholder": "Nombre del nuevo jugador",
+      "addNew": "Añadir a la partida"
+    }
   },
   "results": {
     "title": "Resultado",
