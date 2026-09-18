@@ -120,7 +120,13 @@
     "exploded": "EXPLODIU!",
     "whoHadPotato": "Quem estava com a batata?",
     "reversoTarget": "Quem te penalizou da última vez:",
-    "reversoSelf": "Ninguém te penalizou ainda. Você leva o primeiro pra começar!"
+    "reversoSelf": "Ninguém te penalizou ainda. Você leva o primeiro pra começar!",
+    "canRouletteStart": "Começar a roleta",
+    "canRouletteTurn": "Vez de apertar",
+    "canRoulettePress": "Apertar a latinha",
+    "canRouletteSafe": "Ufa! Não abriu dessa vez...",
+    "canRouletteOpened": "A LATINHA ABRIU!",
+    "canRouletteLoser": "{{name}} se lascou e precisa beber!"
   },
   "onboarding": {
     "skip": "Pular",

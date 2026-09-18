@@ -126,6 +126,12 @@
       "shortRule": "Don't get stuck with the potato!",
       "rules": "Tap **\"Start timer\"** to begin.\n\nPass an object quickly to any person.\n\nWhen the timer ends and the sound **explodes**, whoever is holding the potato **gets penalized**.\n\nSelect the unlucky one from the list."
     },
+    "can_roulette": {
+      "title": "Can Roulette",
+      "description": "One can, one mystery. Everyone presses it in turn — it can pop at any moment. Whoever is holding it when it does gets penalized.",
+      "shortRule": "Press the can and pray",
+      "rules": "Tap **\"Start the roulette\"** to prep the can.\n\nIn order, each player taps the on-screen button to press the can.\n\nIt can pop on any press — nobody knows when.\n\nWhoever is pressing when it **pops** gets penalized."
+    },
     "duck_game": {
       "title": "Duck What?",
       "description": "Going clockwise, say 'duck' to pass to the next. 'What?' reverses the direction. 'Quack' skips the next person. Whoever messes up loses.",

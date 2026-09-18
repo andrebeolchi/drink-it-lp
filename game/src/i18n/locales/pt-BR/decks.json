@@ -126,6 +126,12 @@
       "shortRule": "Não fique com a batata!",
       "rules": "Toque em **\"Começar o timer\"** para iniciar.\n\nPasse um objeto rapidamente para qualquer pessoa. \n\nQuando o timer acabar e o som **explodir**, quem estiver com a batata **perde**.\n\nSelecione o azarado na lista."
     },
+    "can_roulette": {
+      "title": "Roleta da Latinha",
+      "description": "Uma latinha, um mistério. Cada um aperta na sua vez — ela pode abrir a qualquer momento. Quem estiver segurando quando isso acontecer, bebe.",
+      "shortRule": "Aperte a latinha e reze",
+      "rules": "Toque em **\"Começar a roleta\"** para preparar a latinha.\n\nEm ordem, cada jogador aperta o botão na tela para apertar a latinha.\n\nEla pode abrir em qualquer aperto — ninguém sabe quando.\n\nQuem estiver apertando quando ela **abrir**, bebe."
+    },
     "duck_game": {
       "title": "Pato Quê",
       "description": "Em sentido horário, diga 'pato' para passar ao próximo. 'Que?' inverte o sentido. 'Quack' pula a próxima pessoa. Quem errar perde.",

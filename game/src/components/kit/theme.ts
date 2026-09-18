@@ -33,4 +33,5 @@ export const CARD_BORDER_CLASSES: Record<MinigameType, string> = {
   MODIFIER: 'border-card-modifier',
   BENEFIT: 'border-card-benefit',
   REVERSO: 'border-card-action',
+  CAN_ROULETTE: 'border-card-reflex',
 }

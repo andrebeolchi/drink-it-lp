@@ -126,6 +126,12 @@
       "shortRule": "¡No te quedes con la patata!",
       "rules": "Toca en **\"Comenzar temporizador\"** para iniciar.\n\nPasa un objeto rápidamente a cualquier persona.\n\nCuando el temporizador termine y el sonido **explote**, quien tenga la patata **pierde**.\n\nSelecciona al desafortunado en la lista."
     },
+    "can_roulette": {
+      "title": "Ruleta de la Latita",
+      "description": "Una latita, un misterio. Cada uno la aprieta en su turno — puede abrirse en cualquier momento. Quien la esté apretando cuando eso pase, bebe.",
+      "shortRule": "Aprieta la latita y reza",
+      "rules": "Toca en **\"Comenzar la ruleta\"** para preparar la latita.\n\nEn orden, cada jugador toca el botón en pantalla para apretar la latita.\n\nPuede abrirse en cualquier apretón — nadie sabe cuándo.\n\nQuien la esté apretando cuando **se abra**, bebe."
+    },
     "duck_game": {
       "title": "Pato ¿Qué?",
       "description": "En sentido horario, di 'pato' para pasar al siguiente. '¿Qué?' invierte el sentido. 'Quack' salta a la siguiente persona. Quien se equivoque, pierde.",

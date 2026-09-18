@@ -151,4 +151,12 @@ export const DECK: DeckCard[] = [
     minigameType: 'HOT_POTATO',
     i18nKey: 'decks:cards.hot_potato',
   },
+
+  // CAN_ROULETTE
+  {
+    id: 'card_can_roulette',
+    category: 'REFLEX',
+    minigameType: 'CAN_ROULETTE',
+    i18nKey: 'decks:cards.can_roulette',
+  },
 ]

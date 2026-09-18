@@ -2,6 +2,7 @@ import { CARD_REGISTRY, registerCardComponent } from '@/core/engine/card-registr
 import type { DeckCard } from '@/core/types/card'
 
 import { BenefitCard } from '@/components/feature/benefit-card'
+import { CanRouletteCard } from '@/components/feature/can-roulette-card'
 import { DirectTargetCard } from '@/components/feature/direct-target-card'
 import { GroupDynamicCard } from '@/components/feature/group-dynamic-card'
 import { HotPotatoCard } from '@/components/feature/hot-potato-card'
@@ -20,6 +21,7 @@ registerCardComponent('MODIFIER', ModifierCard)
 registerCardComponent('BENEFIT', BenefitCard)
 registerCardComponent('HOT_POTATO', HotPotatoCard)
 registerCardComponent('REVERSO', ReversoCard)
+registerCardComponent('CAN_ROULETTE', CanRouletteCard)
 
 interface Props {
   card: DeckCard | null
