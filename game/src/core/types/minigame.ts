@@ -8,3 +8,4 @@ export type MinigameType =
   | 'BENEFIT'
   | 'HOT_POTATO'
   | 'REVERSO'
+  | 'CAN_ROULETTE'

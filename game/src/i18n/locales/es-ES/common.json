@@ -129,7 +129,13 @@
     "exploded": "¡EXPLOTÓ!",
     "whoHadPotato": "¿Quién tenía la patata?",
     "reversoTarget": "Quién te penalizó la última vez:",
-    "reversoSelf": "Nadie te ha penalizado todavía. ¡Llevas el primero tú para empezar!"
+    "reversoSelf": "Nadie te ha penalizado todavía. ¡Llevas el primero tú para empezar!",
+    "canRouletteStart": "Comenzar la ruleta",
+    "canRouletteTurn": "Turno de intentar",
+    "canRoulettePress": "Intentar abrir la latita",
+    "canRouletteSafe": "¡Uf! No se abrió esta vez...",
+    "canRouletteOpened": "¡LA LATITA SE ABRIÓ!",
+    "canRouletteLoser": "¡{{name}} se mojó y tiene que beber!"
   },
   "onboarding": {
     "skip": "Saltar",

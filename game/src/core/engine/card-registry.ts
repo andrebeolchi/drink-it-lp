@@ -24,6 +24,7 @@ export const CARD_REGISTRY: Record<MinigameType, CardResolver> = {
   BENEFIT: { component: null, fullScreen: false, requiresTimer: false },
   HOT_POTATO: { component: null, fullScreen: true, requiresTimer: true },
   REVERSO: { component: null, fullScreen: false, requiresTimer: false },
+  CAN_ROULETTE: { component: null, fullScreen: true, requiresTimer: false },
 }
 
 export function registerCardComponent(type: MinigameType, component: ComponentType<CardProps>): void {
